@@ -189,6 +189,81 @@ def validate_skeletons(skeletons_dir: Path, pipeline_name: str) -> bool:
 
 
 # ──────────────────────────────────────────────────────────────────────────────
+# Preprocessed-tensor detection
+# ──────────────────────────────────────────────────────────────────────────────
+
+class PreprocessedStatus:
+    """
+    Result of :func:`check_preprocessed_tensors`.
+
+    Attributes:
+        skeletons_ok:  True if skeletons/ dir with ≥1 .npy exists.
+        train_csv_ok:  True if train_labels.csv exists.
+        test_csv_ok:   True if test_labels.csv exists.
+        skeletons_dir: Path that was checked.
+        train_csv:     Path that was checked.
+        test_csv:      Path that was checked.
+    """
+
+    def __init__(
+        self,
+        skeletons_ok: bool,
+        train_csv_ok: bool,
+        test_csv_ok: bool,
+        skeletons_dir: Path,
+        train_csv: Path,
+        test_csv: Path,
+    ) -> None:
+        self.skeletons_ok = skeletons_ok
+        self.train_csv_ok = train_csv_ok
+        self.test_csv_ok = test_csv_ok
+        self.skeletons_dir = skeletons_dir
+        self.train_csv = train_csv
+        self.test_csv = test_csv
+
+    @property
+    def ready(self) -> bool:
+        """True when all three artefacts are present → training can start."""
+        return self.skeletons_ok and self.train_csv_ok and self.test_csv_ok
+
+
+def check_preprocessed_tensors(processed_dir: Path) -> "PreprocessedStatus":
+    """
+    Inspect *processed_dir* for the artefacts required to train directly.
+
+    Expected layout::
+
+        processed_dir/
+            skeletons/          ← must contain ≥1 *.npy file
+            train_labels.csv
+            test_labels.csv
+
+    Args:
+        processed_dir: Root of the processed dataset directory.
+
+    Returns:
+        A :class:`PreprocessedStatus` describing what was found.
+    """
+    processed_dir = Path(processed_dir)
+    skeletons_dir = processed_dir / "skeletons"
+    train_csv = processed_dir / "train_labels.csv"
+    test_csv = processed_dir / "test_labels.csv"
+
+    skeletons_ok = skeletons_dir.is_dir() and bool(list(skeletons_dir.glob("*.npy")))
+    train_csv_ok = train_csv.is_file()
+    test_csv_ok = test_csv.is_file()
+
+    return PreprocessedStatus(
+        skeletons_ok=skeletons_ok,
+        train_csv_ok=train_csv_ok,
+        test_csv_ok=test_csv_ok,
+        skeletons_dir=skeletons_dir,
+        train_csv=train_csv,
+        test_csv=test_csv,
+    )
+
+
+# ──────────────────────────────────────────────────────────────────────────────
 # Error diagnostics
 # ──────────────────────────────────────────────────────────────────────────────
 
