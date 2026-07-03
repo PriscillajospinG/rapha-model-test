@@ -1,0 +1,35 @@
+sample_name,shape,shape_ok,frame_count,missing_landmarks
+Assisted External Rotation in Neutral,"(4, 300, 8, 1)",True,689,0
+Assisted Flexion in Lying,"(4, 300, 8, 1)",True,1059,0
+Assisted Rotation at 45 degree,"(4, 300, 8, 1)",True,668,0
+Assisted Rotation at 90 degree,"(4, 300, 8, 1)",True,748,0
+Break Trunk Rotation,"(4, 300, 8, 1)",True,808,0
+Dips,"(4, 300, 8, 1)",True,673,0
+Elbow Plank on Wall with Single Leg Extension,"(4, 300, 8, 1)",True,594,0
+Elbow Soft Tissue Release,"(4, 300, 8, 1)",True,3660,1990
+Elbow Strenghtning,"(4, 300, 8, 1)",True,2498,1001
+Hand Behind Back Strecth,"(4, 300, 8, 1)",True,7560,340
+Hand Behind Back Strecth_1,"(4, 300, 8, 1)",True,3780,170
+Lawnmower,"(4, 300, 8, 1)",True,628,0
+Plank on Elbows and Half Knee,"(4, 300, 8, 1)",True,750,0
+Push-Up Plus on Table,"(4, 300, 8, 1)",True,502,0
+Scapula Wall Slides,"(4, 300, 8, 1)",True,1519,0
+Scapular setting,"(4, 300, 8, 1)",True,475,0
+Shoulder Drop ,"(4, 300, 8, 1)",True,2781,1
+Shoulder Flexion with Opposite Arm Isometric Hold,"(4, 300, 8, 1)",True,1100,0
+Shoulder-Flexion-with-Isometric-Posterio,"(4, 300, 8, 1)",True,2858,242
+Shoulder-Flexion-with-Isometric-Posterio_1,"(4, 300, 8, 1)",True,1429,121
+Shoulder-Lateral-Rotation-in-Side-Lying,"(4, 300, 8, 1)",True,3968,242
+Shoulder-Lateral-Rotation-in-Side-Lying_1,"(4, 300, 8, 1)",True,1984,121
+Shoulder-Lateral-Rotation,"(4, 300, 8, 1)",True,9022,484
+Shoulder-Lateral-Rotation_1,"(4, 300, 8, 1)",True,2527,121
+Shoulder-Medial-Rotation-with-Theraband,"(4, 300, 8, 1)",True,2576,242
+Shoulder-Medial-Rotation-with-Theraband_1,"(4, 300, 8, 1)",True,1288,121
+Side Lying External Rotation,"(4, 300, 8, 1)",True,717,0
+Sleeper Stretch,"(4, 300, 8, 1)",True,807,2
+Standing scapular retraction - Bent elbows,"(4, 300, 8, 1)",True,401,0
+Standing scapular retraction - Straight elbows,"(4, 300, 8, 1)",True,422,8
+Supine Serratus Punch,"(4, 300, 8, 1)",True,788,0
+Thoracic Rotation Mobilization Quadruped,"(4, 300, 8, 1)",True,593,0
+Wall Perturbations with Ball,"(4, 300, 8, 1)",True,585,0
+wall slides,"(4, 300, 8, 1)",True,1039,65
