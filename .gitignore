@@ -1,0 +1,41 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Model checkpoints & weights
+models/*.pth
+checkpoints/
+
+# Datasets (Local raw and processed datasets)
+dataset_raw/
+processed_dataset/
+dataset_inventory.csv
+dataset_raw_upper
+dataset_raw_face
+dataset_raw_poststroke/
+
+# Logs & Generated results
+*.log
+results/*.png
+results/*.csv
+
+# Operating System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+
+processed_dataset_upper/
+processed_dataset_face/
+processed_dataset_poststroke/
