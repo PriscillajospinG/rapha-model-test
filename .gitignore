@@ -22,9 +22,9 @@ dataset_raw_poststroke/
 
 
 processed_dataset/
-# processed_dataset_upper/
-# processed_dataset_face/
-# processed_dataset_poststroke/
+processed_dataset_upper/
+processed_dataset_face/
+processed_dataset_poststroke/
 
 # Logs & Generated results
 *.log
