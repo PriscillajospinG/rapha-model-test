@@ -15,11 +15,16 @@ checkpoints/
 
 # Datasets (Local raw and processed datasets)
 dataset_raw/
-processed_dataset/
-dataset_inventory.csv
 dataset_raw_upper
 dataset_raw_face
 dataset_raw_poststroke/
+
+
+
+# processed_dataset/
+processed_dataset_upper/
+processed_dataset_face/
+processed_dataset_poststroke/
 
 # Logs & Generated results
 *.log
@@ -36,6 +41,3 @@ ehthumbs.db
 Thumbs.db
 
 
-processed_dataset_upper/
-processed_dataset_face/
-processed_dataset_poststroke/
