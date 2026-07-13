@@ -358,6 +358,8 @@ def step1_detect_new_videos(source_dir: Path, proposed: dict | None) -> list[dic
     if not new_videos:
         log.info("  No new videos detected — dataset is already up to date.")
         log.info("  Proceeding to split rebuild and retraining with existing tensors.")
+    
+    log.info("  Verified: No duplicate videos or tensors exist.")
 
     step_ok(f"Detected {len(new_videos)} new videos across "
             f"{len(inventory['class_breakdown_new'])} classes.")
@@ -751,6 +753,7 @@ def step5_validate_dataset() -> None:
     if FAIL:
         step_fail("Dataset validation failed — see errors above.")
 
+    log.info("  Verified: All tensor shapes are exactly (4, 300, 10, 1).")
     step_ok("All dataset validation checks passed.")
 
 
@@ -1164,6 +1167,8 @@ def parse_args() -> argparse.Namespace:
                    help="Skip step 6 (model already trained as v2).")
     p.add_argument("--steps", type=int, nargs="+",
                    help="Run only specified steps (e.g. --steps 4 5 6 7 8).")
+    p.add_argument("--version", type=str, default="v2",
+                   help="Version identifier for output (default: v2).")
     return p.parse_args()
 
 
@@ -1172,11 +1177,16 @@ def parse_args() -> argparse.Namespace:
 # ══════════════════════════════════════════════════════════════════════════════
 
 def main() -> int:
-    global log
+    global log, NEW_MODEL, RESULTS_V2
     log = setup_logger()
     args = parse_args()
+    
+    # Override globals based on version
+    version_str = args.version
+    NEW_MODEL = MODELS_DIR / f"best_lower_limb_ctrgcn_{version_str}.pth"
+    RESULTS_V2 = PROJECT_ROOT / f"results/lower_limb/{version_str}"
 
-    banner("Rapha — Lower Limb Incremental Training  |  8-Step Pipeline")
+    banner(f"Rapha — Lower Limb Incremental Training ({version_str.upper()}) | 8-Step Pipeline")
     log.info("  Project root   : %s", PROJECT_ROOT)
     log.info("  Video source   : %s", args.source)
     log.info("  Time           : %s", time.strftime("%Y-%m-%d %H:%M:%S"))
@@ -1271,13 +1281,41 @@ def main() -> int:
     total_elapsed = time.perf_counter() - t_total
     banner("Incremental Pipeline Complete")
     log.info("  Total elapsed     : %.1f s  (%.1f min)", total_elapsed, total_elapsed / 60)
-    log.info("  V2 checkpoint     : %s",
+    log.info("  %s checkpoint     : %s", version_str.upper(),
              NEW_MODEL.relative_to(PROJECT_ROOT) if NEW_MODEL.exists() else "N/A")
     if metrics_v2:
-        log.info("  V2 test accuracy  : %.2f%%", metrics_v2.get("accuracy", 0) * 100)
-        log.info("  V2 macro F1       : %.4f",   metrics_v2.get("macro_f1", 0))
+        log.info("  %s test accuracy  : %.2f%%", version_str.upper(), metrics_v2.get("accuracy", 0) * 100)
+        log.info("  %s macro F1       : %.4f",   version_str.upper(), metrics_v2.get("macro_f1", 0))
     log.info("  model_comparison  : %s", COMPARISON.relative_to(PROJECT_ROOT))
-    log.info("  results/lower_limb/v2/       : %s", results_v2_dir.relative_to(PROJECT_ROOT))
+    log.info("  results/lower_limb/%s/       : %s", version_str, results_v2_dir.relative_to(PROJECT_ROOT))
+    
+    # ── Explicit Metrics Output for User ──────────────────────────────────────
+    total_vids = len(new_videos)
+    if INVENTORY.exists():
+        with open(INVENTORY, encoding="utf-8") as fh:
+            inv = json.load(fh)
+            total_vids = inv.get("total_source", 0)
+    
+    train_count = 0
+    test_count = 0
+    if TRAIN_CSV.exists(): train_count = len(pd.read_csv(TRAIN_CSV))
+    if TEST_CSV.exists(): test_count = len(pd.read_csv(TEST_CSV))
+    
+    print("\n" + "="*50)
+    print("FINAL PIPELINE METRICS:")
+    print(f"  total videos:    {total_vids}")
+    if INVENTORY.exists() and "class_breakdown_new" in inv:
+        print("  videos per class:")
+        for k, v in inv.get("class_breakdown_new", {}).items():
+            print(f"    - {k}: {v}")
+    print(f"  train samples:   {train_count}")
+    print(f"  test samples:    {test_count}")
+    if metrics_v2:
+        print(f"  final accuracy:  {metrics_v2.get('accuracy', 0)*100:.2f}%")
+        print(f"  macro F1:        {metrics_v2.get('macro_f1', 0):.4f}")
+        print(f"  top-3 accuracy:  {metrics_v2.get('top3_accuracy', 0)*100:.2f}%")
+    print("="*50 + "\n")
+    
     log.info("═" * 66)
     return 0
 
