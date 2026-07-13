@@ -3,12 +3,12 @@ preprocessing/extract_upper_limb_dataset.py
 ───────────────────────────────────────────────────────────────────────────
 Physiotherapy Upper-Limb CTR-GCN Dataset Labeling Pipeline
 
-Recursively scans every video inside dataset_raw_upper/, runs MediaPipe Pose
+Recursively scans every video inside datasets/upper_limb/raw/, runs MediaPipe Pose
 on every frame (using Tasks API — mediapipe >= 0.10), extracts upper-limb
 joint landmarks (joints 11-16, 23-24), and saves a single frame-level
 labeled CSV to:
 
-    processed_dataset_upper/upper_limb_frame_labels.csv
+    datasets/upper_limb/upper_limb_frame_labels.csv
 
 Joint remapping:
     MP-11 Left Shoulder  → node 0
@@ -44,12 +44,12 @@ from mediapipe.tasks.python.vision import RunningMode
 # ─── Configuration ────────────────────────────────────────────────────────────
 
 BASE_DIR   = Path(__file__).parent.parent
-RAW_DIR    = BASE_DIR / "dataset_raw_upper"
-OUTPUT_DIR = BASE_DIR / "processed_dataset_upper"
+RAW_DIR    = BASE_DIR / "datasets/upper_limb/raw"
+OUTPUT_DIR = BASE_DIR / "datasets/upper_limb"
 OUTPUT_CSV = OUTPUT_DIR / "upper_limb_frame_labels.csv"
 
 # Model path — downloaded by the organise step or manually placed here
-MODEL_PATH = BASE_DIR / "pose_landmarker_full.task"
+MODEL_PATH = BASE_DIR / "models/pose_landmarker_full.task"
 
 # MediaPipe Pose landmark indices for upper limbs
 UPPER_LIMB_JOINTS_MP     = [11, 12, 13, 14, 15, 16, 23, 24]  # MediaPipe indices

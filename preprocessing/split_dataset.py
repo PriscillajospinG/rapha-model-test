@@ -1,11 +1,11 @@
 """
 split_dataset.py
 ─────────────────────────────────────────────────────────────────────────────
-Scans the processed_dataset/skeletons/ directory for *.npy skeleton files.
+Scans the datasets/lower_limb/skeletons/ directory for *.npy skeleton files.
 Derives labels from filename prefix (e.g., knee_ -> knee, hip_ -> hip).
 Applies an 80/20 train/test split stratified by class, and generates:
-    processed_dataset/train_labels.csv
-    processed_dataset/test_labels.csv
+    datasets/lower_limb/train_labels.csv
+    datasets/lower_limb/test_labels.csv
 
 Usage:
     python preprocessing/split_dataset.py
@@ -20,8 +20,8 @@ from sklearn.model_selection import train_test_split
 
 # Setup paths relative to project root
 BASE_DIR = Path(__file__).parent.parent
-SKELETON_DIR = BASE_DIR / "processed_dataset" / "skeletons"
-OUTPUT_DIR = BASE_DIR / "processed_dataset"
+SKELETON_DIR = BASE_DIR / "datasets/lower_limb" / "skeletons"
+OUTPUT_DIR = BASE_DIR / "datasets/lower_limb"
 
 # Logging setup
 logging.basicConfig(
@@ -93,7 +93,7 @@ def split():
             df, test_size=0.2, random_state=42
         )
 
-    # Save to processed_dataset directory
+    # Save to datasets/lower_limb directory
     train_csv_path = OUTPUT_DIR / "train_labels.csv"
     test_csv_path = OUTPUT_DIR / "test_labels.csv"
 

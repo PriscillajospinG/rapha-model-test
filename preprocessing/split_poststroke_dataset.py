@@ -1,13 +1,13 @@
 """
 preprocessing/split_poststroke_dataset.py
 ───────────────────────────────────────────────────────────────────────────
-Scans processed_dataset_poststroke/skeletons/ for *.npy skeleton files.
+Scans datasets/post_stroke/skeletons/ for *.npy skeleton files.
 Derives labels from the CSV label column (class name → integer ID).
 Applies an 80/20 stratified train/test split and generates:
 
-    processed_dataset_poststroke/train_labels.csv
-    processed_dataset_poststroke/test_labels.csv
-    processed_dataset_poststroke/poststroke_class_map.csv
+    datasets/post_stroke/train_labels.csv
+    datasets/post_stroke/test_labels.csv
+    datasets/post_stroke/poststroke_class_map.csv
 
 The class map is built dynamically from whatever classes appear in the
 dataset (not hardcoded), so it adapts to the actual data available.
@@ -24,8 +24,8 @@ from sklearn.model_selection import train_test_split
 
 # Setup paths relative to project root
 BASE_DIR     = Path(__file__).parent.parent
-SKELETON_DIR = BASE_DIR / "processed_dataset_poststroke" / "skeletons"
-OUTPUT_DIR   = BASE_DIR / "processed_dataset_poststroke"
+SKELETON_DIR = BASE_DIR / "datasets/post_stroke" / "skeletons"
+OUTPUT_DIR   = BASE_DIR / "datasets/post_stroke"
 INPUT_CSV    = OUTPUT_DIR / "poststroke_frame_labels.csv"
 
 # Logging setup

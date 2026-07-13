@@ -2,7 +2,7 @@
 preprocessing/build_face_ctrgcn_dataset.py
 ───────────────────────────────────────────────────────────────────────────
 Reads the frame-level landmarks from:
-    processed_dataset_face/face_frame_labels.csv
+    datasets/face/face_frame_labels.csv
 
 Groups them by video, replaces -1 sentinels with 0.0, resamples/pads
 to exactly T=300 frames, and saves CTR-GCN tensors of shape:
@@ -10,7 +10,7 @@ to exactly T=300 frames, and saves CTR-GCN tensors of shape:
     (3, 300, 33, 1)
 
 to:
-    processed_dataset_face/skeletons/
+    datasets/face/skeletons/
 
 Tensor layout:
     C=3  : x, y, z  (no visibility — FaceMesh does not provide it)
@@ -34,8 +34,8 @@ from tqdm import tqdm
 # ── Paths ─────────────────────────────────────────────────────────────────────
 
 BASE_DIR   = Path(__file__).parent.parent
-INPUT_CSV  = BASE_DIR / "processed_dataset_face" / "face_frame_labels.csv"
-OUTPUT_DIR = BASE_DIR / "processed_dataset_face" / "skeletons"
+INPUT_CSV  = BASE_DIR / "datasets/face" / "face_frame_labels.csv"
+OUTPUT_DIR = BASE_DIR / "datasets/face" / "skeletons"
 
 # ── Logger ────────────────────────────────────────────────────────────────────
 

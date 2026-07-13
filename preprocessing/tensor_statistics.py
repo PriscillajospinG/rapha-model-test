@@ -1,8 +1,8 @@
 """
 preprocessing/tensor_statistics.py
 ────────────────────────────────────
-Validates all .npy tensors in processed_dataset_upper/skeletons/
-and generates processed_dataset_upper/tensor_statistics.csv
+Validates all .npy tensors in datasets/upper_limb/skeletons/
+and generates datasets/upper_limb/tensor_statistics.csv
 """
 import csv
 import sys
@@ -11,9 +11,9 @@ from pathlib import Path
 import pandas as pd
 
 BASE_DIR      = Path(__file__).parent.parent
-SKELETON_DIR  = BASE_DIR / "processed_dataset_upper" / "skeletons"
-CSV_PATH      = BASE_DIR / "processed_dataset_upper" / "upper_limb_frame_labels.csv"
-OUT_CSV       = BASE_DIR / "processed_dataset_upper" / "tensor_statistics.csv"
+SKELETON_DIR  = BASE_DIR / "datasets/upper_limb" / "skeletons"
+CSV_PATH      = BASE_DIR / "datasets/upper_limb" / "upper_limb_frame_labels.csv"
+OUT_CSV       = BASE_DIR / "datasets/upper_limb" / "tensor_statistics.csv"
 
 EXPECTED_SHAPE = (4, 300, 8, 1)
 

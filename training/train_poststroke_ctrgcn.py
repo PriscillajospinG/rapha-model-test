@@ -20,10 +20,10 @@ Training configuration:
 
 Outputs:
   models/best_poststroke_ctrgcn.pth     best validation accuracy checkpoint
-  results_poststroke/confusion_matrix.png
-  results_poststroke/loss_curve.png
-  results_poststroke/accuracy_curve.png
-  results_poststroke/classification_report.txt
+  results/lower_limb/post_stroke/confusion_matrix.png
+  results/lower_limb/post_stroke/loss_curve.png
+  results/lower_limb/post_stroke/accuracy_curve.png
+  results/lower_limb/post_stroke/classification_report.txt
 
 Usage:
   python training/train_poststroke_ctrgcn.py
@@ -61,12 +61,12 @@ from model.ctrgcn import Model
 
 # ── Paths ──────────────────────────────────────────────────────────────────────
 BASE_DIR      = Path(__file__).parent.parent
-TRAIN_CSV     = BASE_DIR / "processed_dataset_poststroke" / "train_labels.csv"
-TEST_CSV      = BASE_DIR / "processed_dataset_poststroke" / "test_labels.csv"
-SKELETON_DIR  = BASE_DIR / "processed_dataset_poststroke" / "skeletons"
-CLASS_MAP_CSV = BASE_DIR / "processed_dataset_poststroke" / "poststroke_class_map.csv"
+TRAIN_CSV     = BASE_DIR / "datasets/post_stroke" / "train_labels.csv"
+TEST_CSV      = BASE_DIR / "datasets/post_stroke" / "test_labels.csv"
+SKELETON_DIR  = BASE_DIR / "datasets/post_stroke" / "skeletons"
+CLASS_MAP_CSV = BASE_DIR / "datasets/post_stroke" / "poststroke_class_map.csv"
 MODELS_DIR    = BASE_DIR / "models"
-RESULTS_DIR   = BASE_DIR / "results_poststroke"
+RESULTS_DIR   = BASE_DIR / "results/lower_limb/post_stroke"
 BEST_MODEL    = MODELS_DIR / "best_poststroke_ctrgcn.pth"
 
 # ── Training hyper-parameters ─────────────────────────────────────────────────

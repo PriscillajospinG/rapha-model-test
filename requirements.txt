@@ -1,28 +1,50 @@
-# ── Core dependencies ─────────────────────────────────────────────────────────
-# Generic versions — no platform-specific build tags (no +cpu, +mps, +cu121, etc.)
-# The correct CUDA-enabled build is installed separately; see instructions below.
+# ══════════════════════════════════════════════════════════════════════════════
+#  requirements.txt — Rapha Physiotherapy AI Platform
+#  ─────────────────────────────────────────────────────────────────────────────
+#  Install order: pip install -r requirements.txt
+#  Then install PyTorch separately (see CUDA section below).
+# ══════════════════════════════════════════════════════════════════════════════
 
+# ── Vision & pose estimation ──────────────────────────────────────────────────
 opencv-python>=4.8.0
 mediapipe>=0.10.0
+
+# ── Numerical & data ──────────────────────────────────────────────────────────
 numpy>=1.24.0
 pandas>=2.0.0
+scipy>=1.10.0
+
+# ── Visualisation ─────────────────────────────────────────────────────────────
 matplotlib>=3.7.0
 seaborn>=0.12.0
+
+# ── ML utilities ─────────────────────────────────────────────────────────────
 scikit-learn>=1.2.0
 tqdm>=4.65.0
 
-# ── PyTorch (generic — works on all platforms) ────────────────────────────────
-# Install the generic build for CPU / Apple Silicon (MPS):
+# ── Configuration ─────────────────────────────────────────────────────────────
+pyyaml>=6.0.0    # required for configs/lower_limb.yaml
+
+# ── Hashing & system ──────────────────────────────────────────────────────────
+# hashlib, subprocess, pathlib — standard library (no install needed)
+
+# ══════════════════════════════════════════════════════════════════════════════
+#  PYTORCH — install separately with the correct CUDA build tag
+# ══════════════════════════════════════════════════════════════════════════════
+
+# CPU / Apple MPS (M1/M2/M3):
 #   pip install torch>=2.2 torchvision>=0.17 torchaudio>=2.2
-#
-# ── NVIDIA CUDA (recommended for training on Linux / Windows) ─────────────────
-# Install the CUDA 12.1 build:
-#   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
-#
-# For CUDA 11.8:
-#   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-#
-# Verify your installation:
+
+# NVIDIA CUDA 12.1 (A100, H100, L40S, L4, T4):
+#   pip install torch torchvision torchaudio \
+#       --index-url https://download.pytorch.org/whl/cu121
+
+# NVIDIA CUDA 11.8:
+#   pip install torch torchvision torchaudio \
+#       --index-url https://download.pytorch.org/whl/cu118
+
+# Verify CUDA availability:
 #   python -c "import torch; print(torch.cuda.is_available(), torch.cuda.get_device_name(0))"
+
 torch>=2.2
 torchvision>=0.17

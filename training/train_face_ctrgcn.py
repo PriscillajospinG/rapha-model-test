@@ -20,10 +20,10 @@ Training configuration:
 
 Outputs:
   models/best_face_ctrgcn.pth              best validation accuracy checkpoint
-  results_face/loss_curve.png
-  results_face/accuracy_curve.png
-  results_face/confusion_matrix.png
-  results_face/classification_report.txt
+  results/lower_limb/face/loss_curve.png
+  results/lower_limb/face/accuracy_curve.png
+  results/lower_limb/face/confusion_matrix.png
+  results/lower_limb/face/classification_report.txt
 
 Usage:
   python training/train_face_ctrgcn.py
@@ -61,12 +61,12 @@ from model.ctrgcn import Model
 
 # ── Paths ──────────────────────────────────────────────────────────────────────
 BASE_DIR      = Path(__file__).parent.parent
-TRAIN_CSV     = BASE_DIR / "processed_dataset_face" / "train_labels.csv"
-TEST_CSV      = BASE_DIR / "processed_dataset_face" / "test_labels.csv"
-SKELETON_DIR  = BASE_DIR / "processed_dataset_face" / "skeletons"
-CLASS_MAP_CSV = BASE_DIR / "processed_dataset_face" / "face_class_map.csv"
+TRAIN_CSV     = BASE_DIR / "datasets/face" / "train_labels.csv"
+TEST_CSV      = BASE_DIR / "datasets/face" / "test_labels.csv"
+SKELETON_DIR  = BASE_DIR / "datasets/face" / "skeletons"
+CLASS_MAP_CSV = BASE_DIR / "datasets/face" / "face_class_map.csv"
 MODELS_DIR    = BASE_DIR / "models"
-RESULTS_DIR   = BASE_DIR / "results_face"
+RESULTS_DIR   = BASE_DIR / "results/lower_limb/face"
 BEST_MODEL    = MODELS_DIR / "best_face_ctrgcn.pth"
 
 # ── Hyper-parameters ───────────────────────────────────────────────────────────

@@ -52,8 +52,8 @@ MP_MIN_TRACK_CONF     = 0.5
 # ── Default paths ──────────────────────────────────────────────────────────────
 _BASE_DIR     = Path(__file__).parent.parent
 DEFAULT_MODEL = _BASE_DIR / "models" / "best_poststroke_ctrgcn.pth"
-CLASS_MAP_CSV = _BASE_DIR / "processed_dataset_poststroke" / "poststroke_class_map.csv"
-MODEL_TASK    = _BASE_DIR / "pose_landmarker_full.task"
+CLASS_MAP_CSV = _BASE_DIR / "datasets/post_stroke" / "poststroke_class_map.csv"
+MODEL_TASK    = _BASE_DIR / "models/pose_landmarker_full.task"
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -328,7 +328,7 @@ def main() -> None:
     pred_res = predict(model, tensor, device, class_names)
     t_inference = time.perf_counter() - t_inf_start
 
-    # ── Print results ─────────────────────────────────────────────────────────
+    # ── Print results/lower_limb ─────────────────────────────────────────────────────────
     print("\n" + "=" * 60)
     print("  INFERENCE RESULTS")
     print("=" * 60)

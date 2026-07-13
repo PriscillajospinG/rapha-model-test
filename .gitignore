@@ -1,43 +1,41 @@
-# Python cache
+# Python Cache
 __pycache__/
 *.py[cod]
 *$py.class
+*.so
 
-# Virtual environments
-.venv/
+# Environments
+.env
+.venv
+env/
 venv/
 ENV/
-env/
+env.bak/
+venv.bak/
 
-# Model checkpoints & weights
-models/*.pth
-checkpoints/
-
-# Datasets (Local raw and processed datasets)
-dataset_raw/
-dataset_raw_upper
-dataset_raw_face
-dataset_raw_poststroke/
-
-
-
-processed_dataset/
-processed_dataset_upper/
-processed_dataset_face/
-processed_dataset_poststroke/
-
-# Logs & Generated results
+# Logs
+logs/
 *.log
-results/*.png
-results/*.csv
 
-# Operating System files
+# macOS
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
 
+# Temporary files
+*.tmp
+*.bak
+.ipynb_checkpoints/
 
+# Dataset and Models (optional, usually you want to ignore raw and skeletons)
+# We track the structure but ignore the actual large video and numpy files.
+datasets/*/raw/
+datasets/*/skeletons/
+datasets/*/metadata/
+datasets/*/frames/
+datasets/*/visualizations/
+
+# Results
+results/
+
+# Editor/IDE
+.vscode/
+.idea/

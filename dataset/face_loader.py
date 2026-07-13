@@ -261,7 +261,7 @@ def build_face_loaders(
 # ── Standalone smoke-test ─────────────────────────────────────────────────────
 
 if __name__ == "__main__":
-    base         = Path(__file__).parent.parent / "processed_dataset_face"
+    base         = Path(__file__).parent.parent / "datasets/face"
     train_csv    = str(base / "train_labels.csv")
     test_csv     = str(base / "test_labels.csv")
     skeleton_dir = str(base / "skeletons")

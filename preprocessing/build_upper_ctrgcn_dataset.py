@@ -2,12 +2,12 @@
 preprocessing/build_upper_ctrgcn_dataset.py
 ───────────────────────────────────────────────────────────────────────────
 Reads the frame-level landmarks from:
-    processed_dataset_upper/upper_limb_frame_labels.csv
+    datasets/upper_limb/upper_limb_frame_labels.csv
 
 Groups them by video, handles missing frames, resamples/pads/loops to
 exactly T=300 frames, and constructs/saves the CTR-GCN tensors of shape
 (4, 300, 8, 1) in:
-    processed_dataset_upper/skeletons/
+    datasets/upper_limb/skeletons/
 
 Tensor layout:
     C=4  : x, y, z, visibility
@@ -29,8 +29,8 @@ from tqdm import tqdm
 
 # Setup paths relative to project root
 BASE_DIR  = Path(__file__).parent.parent
-INPUT_CSV = BASE_DIR / "processed_dataset_upper" / "upper_limb_frame_labels.csv"
-OUTPUT_DIR = BASE_DIR / "processed_dataset_upper" / "skeletons"
+INPUT_CSV = BASE_DIR / "datasets/upper_limb" / "upper_limb_frame_labels.csv"
+OUTPUT_DIR = BASE_DIR / "datasets/upper_limb" / "skeletons"
 
 # Logging setup
 logging.basicConfig(

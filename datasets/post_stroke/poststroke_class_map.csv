@@ -1,0 +1,11 @@
+class_name,label
+balance_training,0
+elbow_flexion,1
+gait_training,2
+grasp_release,3
+reaching,4
+shoulder_abduction,5
+shoulder_flexion,6
+sit_to_stand,7
+trunk_rotation,8
+weight_shift,9

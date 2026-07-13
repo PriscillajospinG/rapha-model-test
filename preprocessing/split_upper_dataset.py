@@ -1,12 +1,12 @@
 """
 preprocessing/split_upper_dataset.py
 ───────────────────────────────────────────────────────────────────────────
-Scans processed_dataset_upper/skeletons/ for *.npy skeleton files.
+Scans datasets/upper_limb/skeletons/ for *.npy skeleton files.
 Derives labels from the CSV label column (class name → integer ID).
 Applies an 80/20 stratified train/test split and generates:
 
-    processed_dataset_upper/train_labels.csv
-    processed_dataset_upper/test_labels.csv
+    datasets/upper_limb/train_labels.csv
+    datasets/upper_limb/test_labels.csv
 
 The class map is built dynamically from whatever classes appear in the
 dataset (not hardcoded), so it adapts to the actual data available.
@@ -23,8 +23,8 @@ from sklearn.model_selection import train_test_split
 
 # Setup paths relative to project root
 BASE_DIR     = Path(__file__).parent.parent
-SKELETON_DIR = BASE_DIR / "processed_dataset_upper" / "skeletons"
-OUTPUT_DIR   = BASE_DIR / "processed_dataset_upper"
+SKELETON_DIR = BASE_DIR / "datasets/upper_limb" / "skeletons"
+OUTPUT_DIR   = BASE_DIR / "datasets/upper_limb"
 INPUT_CSV    = OUTPUT_DIR / "upper_limb_frame_labels.csv"
 
 # Logging setup

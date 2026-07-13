@@ -1,0 +1,692 @@
+{
+  "scanned_at": "2026-07-13T15:40:48",
+  "source_dir": "/Volumes/Honz's Things/Lower Limb",
+  "total_source": 127,
+  "new_videos": [
+    {
+      "video_name": "Air Sit Calf Raise - calf strengthening exercise_480p.mp4",
+      "class_name": "calf",
+      "tensor_stem": "calf_Air Sit Calf Raise - calf strengthening exercise_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Air Sit Calf Raise - calf strengthening exercise_480p.mp4"
+    },
+    {
+      "video_name": "Alternating Calf Raise Squat - How to improve balance and ankle strength_480p.mp4",
+      "class_name": "knee",
+      "tensor_stem": "knee_Alternating Calf Raise Squat - How to improve balance and ankle strength_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Alternating Calf Raise Squat - How to improve balance and ankle strength_480p.mp4"
+    },
+    {
+      "video_name": "Ankle ABCs - Rehab Hero (1080p).mp4",
+      "class_name": "ankle",
+      "tensor_stem": "ankle_Ankle ABCs - Rehab Hero (1080p)",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Ankle ABCs - Rehab Hero (1080p).mp4"
+    },
+    {
+      "video_name": "Ankle Circles - ankle range of motion exercise_480p.mp4",
+      "class_name": "ankle",
+      "tensor_stem": "ankle_Ankle Circles - ankle range of motion exercise_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Ankle Circles - ankle range of motion exercise_480p.mp4"
+    },
+    {
+      "video_name": "Ankle Dorsiflexion with Band.mp4",
+      "class_name": "toes",
+      "tensor_stem": "toes_Ankle Dorsiflexion with Band",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Ankle Dorsiflexion with Band.mp4"
+    },
+    {
+      "video_name": "Ankle Eversion ABC - peroneal and fibularis strengthening following ankle sprains_480p.mp4",
+      "class_name": "toes",
+      "tensor_stem": "toes_Ankle Eversion ABC - peroneal and fibularis strengthening following ankle sprains_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Ankle Eversion ABC - peroneal and fibularis strengthening following ankle sprains_480p.mp4"
+    },
+    {
+      "video_name": "Ankle Inversion ABC - Tibialis posterior and anterior strengthening following ankle sprains_480p.mp4",
+      "class_name": "toes",
+      "tensor_stem": "toes_Ankle Inversion ABC - Tibialis posterior and anterior strengthening following ankle sprains_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Ankle Inversion ABC - Tibialis posterior and anterior strengthening following ankle sprains_480p.mp4"
+    },
+    {
+      "video_name": "Ankle Inversion with Band - ankle sprain and Tibialis posterior exercise_480p.mp4",
+      "class_name": "toes",
+      "tensor_stem": "toes_Ankle Inversion with Band - ankle sprain and Tibialis posterior exercise_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Ankle Inversion with Band - ankle sprain and Tibialis posterior exercise_480p.mp4"
+    },
+    {
+      "video_name": "Ankle Scours - Ankle DORSIFLEXION Mobility Exercise  Squat Deeper_480p.mp4",
+      "class_name": "knee",
+      "tensor_stem": "knee_Ankle Scours - Ankle DORSIFLEXION Mobility Exercise  Squat Deeper_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Ankle Scours - Ankle DORSIFLEXION Mobility Exercise  Squat Deeper_480p.mp4"
+    },
+    {
+      "video_name": "Assisted Knee Counter Rotation - ankle and knee mobility exercise for tibial internal rotation_480p.mp4",
+      "class_name": "knee",
+      "tensor_stem": "knee_Assisted Knee Counter Rotation - ankle and knee mobility exercise for tibial internal rotation_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Assisted Knee Counter Rotation - ankle and knee mobility exercise for tibial internal rotation_480p.mp4"
+    },
+    {
+      "video_name": "BOSU Ball Single Leg Balance - hip, knee and ankle stability exercise_480p.mp4",
+      "class_name": "knee",
+      "tensor_stem": "knee_BOSU Ball Single Leg Balance - hip, knee and ankle stability exercise_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/BOSU Ball Single Leg Balance - hip, knee and ankle stability exercise_480p.mp4"
+    },
+    {
+      "video_name": "Balance Pad Heel Raise Holds - Intrinsic Foot Muscle Strengthening exercise for ankle stability_480p.mp4",
+      "class_name": "calf",
+      "tensor_stem": "calf_Balance Pad Heel Raise Holds - Intrinsic Foot Muscle Strengthening exercise for ankle stability_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Balance Pad Heel Raise Holds - Intrinsic Foot Muscle Strengthening exercise for ankle stability_480p.mp4"
+    },
+    {
+      "video_name": "Balance Pad Side Step - How to improve proprioception after ankle sprain_480p.mp4",
+      "class_name": "ankle",
+      "tensor_stem": "ankle_Balance Pad Side Step - How to improve proprioception after ankle sprain_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Balance Pad Side Step - How to improve proprioception after ankle sprain_480p.mp4"
+    },
+    {
+      "video_name": "Balance Pad Single Leg Drop - How to improve proprioception after ankle sprain_480p.mp4",
+      "class_name": "ankle",
+      "tensor_stem": "ankle_Balance Pad Single Leg Drop - How to improve proprioception after ankle sprain_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Balance Pad Single Leg Drop - How to improve proprioception after ankle sprain_480p.mp4"
+    },
+    {
+      "video_name": "Balance Pad Single Leg Hinge - How to improve proprioception after ankle sprain_480p.mp4",
+      "class_name": "ankle",
+      "tensor_stem": "ankle_Balance Pad Single Leg Hinge - How to improve proprioception after ankle sprain_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Balance Pad Single Leg Hinge - How to improve proprioception after ankle sprain_480p.mp4"
+    },
+    {
+      "video_name": "Balance Pad Single Leg Stance - How to improve proprioception after ankle sprain_480p.mp4",
+      "class_name": "ankle",
+      "tensor_stem": "ankle_Balance Pad Single Leg Stance - How to improve proprioception after ankle sprain_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Balance Pad Single Leg Stance - How to improve proprioception after ankle sprain_480p.mp4"
+    },
+    {
+      "video_name": "Band Pull Lunge Slider for Foot Strengthening_480p.mp4",
+      "class_name": "knee",
+      "tensor_stem": "knee_Band Pull Lunge Slider for Foot Strengthening_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Band Pull Lunge Slider for Foot Strengthening_480p.mp4"
+    },
+    {
+      "video_name": "Banded Active Dorsiflexion (1080, youtube).mp4.mp4",
+      "class_name": "toes",
+      "tensor_stem": "toes_Banded Active Dorsiflexion (1080, youtube).mp4",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Banded Active Dorsiflexion (1080, youtube).mp4.mp4"
+    },
+    {
+      "video_name": "Banded Ankle Dorsiflexion - Ankle Mobility Exercise to Squat Deeper & Calf Stretch_480p.mp4",
+      "class_name": "knee",
+      "tensor_stem": "knee_Banded Ankle Dorsiflexion - Ankle Mobility Exercise to Squat Deeper & Calf Stretch_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Banded Ankle Dorsiflexion - Ankle Mobility Exercise to Squat Deeper & Calf Stretch_480p.mp4"
+    },
+    {
+      "video_name": "Banded Ankle Inversion - ankle sprain exercise_480p.mp4",
+      "class_name": "ankle",
+      "tensor_stem": "ankle_Banded Ankle Inversion - ankle sprain exercise_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Banded Ankle Inversion - ankle sprain exercise_480p.mp4"
+    },
+    {
+      "video_name": "Banded Gas Pedals - ankle dorsiflexion and plantar flexion strengthening exercise_480p.mp4",
+      "class_name": "toes",
+      "tensor_stem": "toes_Banded Gas Pedals - ankle dorsiflexion and plantar flexion strengthening exercise_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Banded Gas Pedals - ankle dorsiflexion and plantar flexion strengthening exercise_480p.mp4"
+    },
+    {
+      "video_name": "Banded Shin Raises - ankle dorsiflexors strengthening exercise for Tibialis anterior_480p.mp4",
+      "class_name": "toes",
+      "tensor_stem": "toes_Banded Shin Raises - ankle dorsiflexors strengthening exercise for Tibialis anterior_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Banded Shin Raises - ankle dorsiflexors strengthening exercise for Tibialis anterior_480p.mp4"
+    },
+    {
+      "video_name": "Banded Toe Raises - Ankle Dorsiflexion strengthening exercise for Tibialis anterior  shin splints_480p.mp4",
+      "class_name": "toes",
+      "tensor_stem": "toes_Banded Toe Raises - Ankle Dorsiflexion strengthening exercise for Tibialis anterior  shin splints_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Banded Toe Raises - Ankle Dorsiflexion strengthening exercise for Tibialis anterior  shin splints_480p.mp4"
+    },
+    {
+      "video_name": "Box Jumps - plyometric strengthening exercises for vertical jump training and quadriceps power_480p.mp4",
+      "class_name": "quadriceps",
+      "tensor_stem": "quadriceps_Box Jumps - plyometric strengthening exercises for vertical jump training and quadriceps power_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Box Jumps - plyometric strengthening exercises for vertical jump training and quadriceps power_480p.mp4"
+    },
+    {
+      "video_name": "Calf Foam Rolling Massage_480p.mp4",
+      "class_name": "calf",
+      "tensor_stem": "calf_Calf Foam Rolling Massage_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Calf Foam Rolling Massage_480p.mp4"
+    },
+    {
+      "video_name": "Calf Raises - Calf Strengthening and Achilles Tendon Rehab_480p.mp4",
+      "class_name": "calf",
+      "tensor_stem": "calf_Calf Raises - Calf Strengthening and Achilles Tendon Rehab_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Calf Raises - Calf Strengthening and Achilles Tendon Rehab_480p.mp4"
+    },
+    {
+      "video_name": "Cross Band Single Leg Heel Raise - big toe mobility exercise_480p.mp4",
+      "class_name": "calf",
+      "tensor_stem": "calf_Cross Band Single Leg Heel Raise - big toe mobility exercise_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Cross Band Single Leg Heel Raise - big toe mobility exercise_480p.mp4"
+    },
+    {
+      "video_name": "Dorsiflexion March - shin strengthening exercise for ankle dorsiflexors_480p.mp4",
+      "class_name": "toes",
+      "tensor_stem": "toes_Dorsiflexion March - shin strengthening exercise for ankle dorsiflexors_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Dorsiflexion March - shin strengthening exercise for ankle dorsiflexors_480p.mp4"
+    },
+    {
+      "video_name": "Dumbbell Tibialis Curl_480p.mp4",
+      "class_name": "toes",
+      "tensor_stem": "toes_Dumbbell Tibialis Curl_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Dumbbell Tibialis Curl_480p.mp4"
+    },
+    {
+      "video_name": "Dumbbell Toe Raises - tibialis anterior strengthening for shin splints_480p.mp4",
+      "class_name": "toes",
+      "tensor_stem": "toes_Dumbbell Toe Raises - tibialis anterior strengthening for shin splints_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Dumbbell Toe Raises - tibialis anterior strengthening for shin splints_480p.mp4"
+    },
+    {
+      "video_name": "Elevated Banded Ankle Dorsiflexion - ankle mobility exercise and calf stretch_480p.mp4",
+      "class_name": "calf",
+      "tensor_stem": "calf_Elevated Banded Ankle Dorsiflexion - ankle mobility exercise and calf stretch_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Elevated Banded Ankle Dorsiflexion - ankle mobility exercise and calf stretch_480p.mp4"
+    },
+    {
+      "video_name": "Extended Knee Ankle Fl-Ex.mp4",
+      "class_name": "knee",
+      "tensor_stem": "knee_Extended Knee Ankle Fl-Ex",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Extended Knee Ankle Fl-Ex.mp4"
+    },
+    {
+      "video_name": "Floor Taps - ankle stability and proprioception exercise_480p.mp4",
+      "class_name": "ankle",
+      "tensor_stem": "ankle_Floor Taps - ankle stability and proprioception exercise_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Floor Taps - ankle stability and proprioception exercise_480p.mp4"
+    },
+    {
+      "video_name": "Gas Pedals - Achilles Tendon and Ankle Sprain Exercise_480p.mp4",
+      "class_name": "ankle",
+      "tensor_stem": "ankle_Gas Pedals - Achilles Tendon and Ankle Sprain Exercise_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Gas Pedals - Achilles Tendon and Ankle Sprain Exercise_480p.mp4"
+    },
+    {
+      "video_name": "Heel Raise Wall Squat  Wall Sit - knee and ankle stability exercise_480p.mp4",
+      "class_name": "knee",
+      "tensor_stem": "knee_Heel Raise Wall Squat  Wall Sit - knee and ankle stability exercise_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Heel Raise Wall Squat  Wall Sit - knee and ankle stability exercise_480p.mp4"
+    },
+    {
+      "video_name": "Heel Slide with Shoe.mp4.mp4",
+      "class_name": "heel_slide",
+      "tensor_stem": "heel_slide_Heel Slide with Shoe.mp4",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Heel Slide with Shoe.mp4.mp4"
+    },
+    {
+      "video_name": "Hip Extension from Quadruped.mp4",
+      "class_name": "quadriceps",
+      "tensor_stem": "quadriceps_Hip Extension from Quadruped",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Hip Extension from Quadruped.mp4"
+    },
+    {
+      "video_name": "Internal Rotation Foot Slider for Tibialis Posterior Tendinopathy_480p.mp4",
+      "class_name": "toes",
+      "tensor_stem": "toes_Internal Rotation Foot Slider for Tibialis Posterior Tendinopathy_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Internal Rotation Foot Slider for Tibialis Posterior Tendinopathy_480p.mp4"
+    },
+    {
+      "video_name": "Japanese Sit Stretch - stretch for the Tibialis anterior_480p.mp4",
+      "class_name": "toes",
+      "tensor_stem": "toes_Japanese Sit Stretch - stretch for the Tibialis anterior_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Japanese Sit Stretch - stretch for the Tibialis anterior_480p.mp4"
+    },
+    {
+      "video_name": "Kettlebell Ankle Dorsiflexion - assisted kneeling calf stretch_480p.mp4",
+      "class_name": "knee",
+      "tensor_stem": "knee_Kettlebell Ankle Dorsiflexion - assisted kneeling calf stretch_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Kettlebell Ankle Dorsiflexion - assisted kneeling calf stretch_480p.mp4"
+    },
+    {
+      "video_name": "Kettlebell Toe Raises - Tibialis Anterior Strengthening for Shin Splints_480p.mp4",
+      "class_name": "toes",
+      "tensor_stem": "toes_Kettlebell Toe Raises - Tibialis Anterior Strengthening for Shin Splints_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Kettlebell Toe Raises - Tibialis Anterior Strengthening for Shin Splints_480p.mp4"
+    },
+    {
+      "video_name": "Kettlebell Toe Raises - strengthening exercise for the Tibialis anterior and Dorsiflexion_480p.mp4",
+      "class_name": "toes",
+      "tensor_stem": "toes_Kettlebell Toe Raises - strengthening exercise for the Tibialis anterior and Dorsiflexion_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Kettlebell Toe Raises - strengthening exercise for the Tibialis anterior and Dorsiflexion_480p.mp4"
+    },
+    {
+      "video_name": "Kneeling Hip Flexor Stretch.mp4",
+      "class_name": "knee",
+      "tensor_stem": "knee_Kneeling Hip Flexor Stretch",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Kneeling Hip Flexor Stretch.mp4"
+    },
+    {
+      "video_name": "Knees Over Toes Box Squat - Achilles Tendon Exercise_480p.mp4",
+      "class_name": "knee",
+      "tensor_stem": "knee_Knees Over Toes Box Squat - Achilles Tendon Exercise_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Knees Over Toes Box Squat - Achilles Tendon Exercise_480p.mp4"
+    },
+    {
+      "video_name": "Knees Over Toes Split Squat - Modified Lunge for Achilles Tendon Rehab_480p.mp4",
+      "class_name": "knee",
+      "tensor_stem": "knee_Knees Over Toes Split Squat - Modified Lunge for Achilles Tendon Rehab_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Knees Over Toes Split Squat - Modified Lunge for Achilles Tendon Rehab_480p.mp4"
+    },
+    {
+      "video_name": "Massage Ball Calf Release - calves self massage exercises_480p.mp4",
+      "class_name": "calf",
+      "tensor_stem": "calf_Massage Ball Calf Release - calves self massage exercises_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Massage Ball Calf Release - calves self massage exercises_480p.mp4"
+    },
+    {
+      "video_name": "One Inch Heel Raise - Intrinsic Foot Muscle Strengthening exercise for ankle stability_480p.mp4",
+      "class_name": "calf",
+      "tensor_stem": "calf_One Inch Heel Raise - Intrinsic Foot Muscle Strengthening exercise for ankle stability_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/One Inch Heel Raise - Intrinsic Foot Muscle Strengthening exercise for ankle stability_480p.mp4"
+    },
+    {
+      "video_name": "Plate Loaded Toe Raises - strengthening exercise for the Tibialis anterior and Dorsiflexion_480p.mp4",
+      "class_name": "toes",
+      "tensor_stem": "toes_Plate Loaded Toe Raises - strengthening exercise for the Tibialis anterior and Dorsiflexion_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Plate Loaded Toe Raises - strengthening exercise for the Tibialis anterior and Dorsiflexion_480p.mp4"
+    },
+    {
+      "video_name": "Seated Banded Toe Raises - Tibialis Anterior Strengthening for Shin Splints_480p.mp4",
+      "class_name": "toes",
+      "tensor_stem": "toes_Seated Banded Toe Raises - Tibialis Anterior Strengthening for Shin Splints_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Seated Banded Toe Raises - Tibialis Anterior Strengthening for Shin Splints_480p.mp4"
+    },
+    {
+      "video_name": "Seated Calf Raises - Soleus Strengthenjng Exercise_480p.mp4",
+      "class_name": "calf",
+      "tensor_stem": "calf_Seated Calf Raises - Soleus Strengthenjng Exercise_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Seated Calf Raises - Soleus Strengthenjng Exercise_480p.mp4"
+    },
+    {
+      "video_name": "Single Leg Eccentric Calf Raises - Achilles Tendon and Calf Strengthening_480p.mp4",
+      "class_name": "calf",
+      "tensor_stem": "calf_Single Leg Eccentric Calf Raises - Achilles Tendon and Calf Strengthening_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Single Leg Eccentric Calf Raises - Achilles Tendon and Calf Strengthening_480p.mp4"
+    },
+    {
+      "video_name": "Singled Leg Calf Raises - Achilles Tendon and Calf Strengthening Exercise_480p.mp4",
+      "class_name": "calf",
+      "tensor_stem": "calf_Singled Leg Calf Raises - Achilles Tendon and Calf Strengthening Exercise_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Singled Leg Calf Raises - Achilles Tendon and Calf Strengthening Exercise_480p.mp4"
+    },
+    {
+      "video_name": "Slant Board Calf Raise - Achilles tendon, soleus and gastrocnemius strengthening exercise_480p.mp4",
+      "class_name": "calf",
+      "tensor_stem": "calf_Slant Board Calf Raise - Achilles tendon, soleus and gastrocnemius strengthening exercise_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Slant Board Calf Raise - Achilles tendon, soleus and gastrocnemius strengthening exercise_480p.mp4"
+    },
+    {
+      "video_name": "Slant Board Single Leg Calf Raise - Achilles tendon, soleus and gastrocnemius strengthening exercise_480p.mp4",
+      "class_name": "calf",
+      "tensor_stem": "calf_Slant Board Single Leg Calf Raise - Achilles tendon, soleus and gastrocnemius strengthening exercise_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Slant Board Single Leg Calf Raise - Achilles tendon, soleus and gastrocnemius strengthening exercise_480p.mp4"
+    },
+    {
+      "video_name": "Slant Board Toe Raises - Strengthening exercise for the Tibialis anterior and ankle Dorsiflexion_480p.mp4",
+      "class_name": "toes",
+      "tensor_stem": "toes_Slant Board Toe Raises - Strengthening exercise for the Tibialis anterior and ankle Dorsiflexion_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Slant Board Toe Raises - Strengthening exercise for the Tibialis anterior and ankle Dorsiflexion_480p.mp4"
+    },
+    {
+      "video_name": "Slant Board Toe Raises - shin strengthening exercise for ankle Dorsiflexion_480p.mp4",
+      "class_name": "toes",
+      "tensor_stem": "toes_Slant Board Toe Raises - shin strengthening exercise for ankle Dorsiflexion_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Slant Board Toe Raises - shin strengthening exercise for ankle Dorsiflexion_480p.mp4"
+    },
+    {
+      "video_name": "Split Squat Calf Raise - Ankle strengthening exercise for plantar flexors and Achilles tendon_480p.mp4",
+      "class_name": "knee",
+      "tensor_stem": "knee_Split Squat Calf Raise - Ankle strengthening exercise for plantar flexors and Achilles tendon_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Split Squat Calf Raise - Ankle strengthening exercise for plantar flexors and Achilles tendon_480p.mp4"
+    },
+    {
+      "video_name": "Standing Calf Stretch - soleus and gastrocnemius assisted stretch_480p.mp4",
+      "class_name": "calf",
+      "tensor_stem": "calf_Standing Calf Stretch - soleus and gastrocnemius assisted stretch_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Standing Calf Stretch - soleus and gastrocnemius assisted stretch_480p.mp4"
+    },
+    {
+      "video_name": "Standing Quad Stretch with Towel.mp4",
+      "class_name": "quadriceps",
+      "tensor_stem": "quadriceps_Standing Quad Stretch with Towel",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Standing Quad Stretch with Towel.mp4"
+    },
+    {
+      "video_name": "Standing Quad Stretch.mp4",
+      "class_name": "quadriceps",
+      "tensor_stem": "quadriceps_Standing Quad Stretch",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Standing Quad Stretch.mp4"
+    },
+    {
+      "video_name": "Tib Post Heel Raise - Tibialis posterior and ankle rehab exercise_480p.mp4",
+      "class_name": "calf",
+      "tensor_stem": "calf_Tib Post Heel Raise - Tibialis posterior and ankle rehab exercise_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Tib Post Heel Raise - Tibialis posterior and ankle rehab exercise_480p.mp4"
+    },
+    {
+      "video_name": "TibBar Raises - strengthening exercise for the Tibialis anterior and Dorsiflexion_480p.mp4",
+      "class_name": "toes",
+      "tensor_stem": "toes_TibBar Raises - strengthening exercise for the Tibialis anterior and Dorsiflexion_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/TibBar Raises - strengthening exercise for the Tibialis anterior and Dorsiflexion_480p.mp4"
+    },
+    {
+      "video_name": "Tibial Internal Rotations - ankle and knee mobility exercise_480p.mp4",
+      "class_name": "knee",
+      "tensor_stem": "knee_Tibial Internal Rotations - ankle and knee mobility exercise_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Tibial Internal Rotations - ankle and knee mobility exercise_480p.mp4"
+    },
+    {
+      "video_name": "Unilateral One Inch Heel Raise - Intrinsic Foot Muscle Strengthening exercise for ankle stability_480p.mp4",
+      "class_name": "calf",
+      "tensor_stem": "calf_Unilateral One Inch Heel Raise - Intrinsic Foot Muscle Strengthening exercise for ankle stability_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Unilateral One Inch Heel Raise - Intrinsic Foot Muscle Strengthening exercise for ankle stability_480p.mp4"
+    },
+    {
+      "video_name": "Wall Calf Stretch - soleus and gastrocnemius assisted stretch for ankle Dorsiflexion_480p.mp4",
+      "class_name": "calf",
+      "tensor_stem": "calf_Wall Calf Stretch - soleus and gastrocnemius assisted stretch for ankle Dorsiflexion_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Wall Calf Stretch - soleus and gastrocnemius assisted stretch for ankle Dorsiflexion_480p.mp4"
+    },
+    {
+      "video_name": "Wall Lean Toe Raises - Tibialis Anterior Strengthening for Shin Splints_480p.mp4",
+      "class_name": "toes",
+      "tensor_stem": "toes_Wall Lean Toe Raises - Tibialis Anterior Strengthening for Shin Splints_480p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Wall Lean Toe Raises - Tibialis Anterior Strengthening for Shin Splints_480p.mp4"
+    },
+    {
+      "video_name": "YTDown.com_YouTube_Bulgarian-Split-Squat-Calf-Raise_Media_26rNRfZB83w_002_720p.mp4",
+      "class_name": "knee",
+      "tensor_stem": "knee_YTDown.com_YouTube_Bulgarian-Split-Squat-Calf-Raise_Media_26rNRfZB83w_002_720p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/YTDown.com_YouTube_Bulgarian-Split-Squat-Calf-Raise_Media_26rNRfZB83w_002_720p.mp4"
+    },
+    {
+      "video_name": "YTDown.com_YouTube_Bulgarian-Split-Squat-Plate-Hop_Media_1IhJp8Hmt9E_002_720p.mp4",
+      "class_name": "knee",
+      "tensor_stem": "knee_YTDown.com_YouTube_Bulgarian-Split-Squat-Plate-Hop_Media_1IhJp8Hmt9E_002_720p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/YTDown.com_YouTube_Bulgarian-Split-Squat-Plate-Hop_Media_1IhJp8Hmt9E_002_720p.mp4"
+    },
+    {
+      "video_name": "Ytmp3.gg_YouTube_Banded-Isometric-Ankle-Inversion_Media_yG5nG5JCPyI_001_1080p.mp4",
+      "class_name": "ankle",
+      "tensor_stem": "ankle_Ytmp3.gg_YouTube_Banded-Isometric-Ankle-Inversion_Media_yG5nG5JCPyI_001_1080p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Ytmp3.gg_YouTube_Banded-Isometric-Ankle-Inversion_Media_yG5nG5JCPyI_001_1080p.mp4"
+    },
+    {
+      "video_name": "Ytmp3.gg_YouTube_Slant-Board-Eversion-Dorsiflexion_Media_q9hNa-sEda4_001_1080p.mp4",
+      "class_name": "toes",
+      "tensor_stem": "toes_Ytmp3.gg_YouTube_Slant-Board-Eversion-Dorsiflexion_Media_q9hNa-sEda4_001_1080p",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Ytmp3.gg_YouTube_Slant-Board-Eversion-Dorsiflexion_Media_q9hNa-sEda4_001_1080p.mp4"
+    },
+    {
+      "video_name": "hip excercise with quadriceps strecthes.mp4",
+      "class_name": "quadriceps",
+      "tensor_stem": "quadriceps_hip excercise with quadriceps strecthes",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/hip excercise with quadriceps strecthes.mp4"
+    }
+  ],
+  "existing_videos": [
+    {
+      "video_name": "1 hip knee pain.mp4",
+      "class_name": "hip",
+      "tensor_stem": "hip_1 hip knee pain",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/1 hip knee pain.mp4"
+    },
+    {
+      "video_name": "2 Best Hip  Knee Pain .mp4",
+      "class_name": "hip",
+      "tensor_stem": "hip_2 Best Hip  Knee Pain ",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/2 Best Hip  Knee Pain .mp4"
+    },
+    {
+      "video_name": "3 Best Hip  Knee Pain .mp4",
+      "class_name": "hip",
+      "tensor_stem": "hip_3 Best Hip  Knee Pain ",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/3 Best Hip  Knee Pain .mp4"
+    },
+    {
+      "video_name": "4 Best Hip  Knee Pain .mp4",
+      "class_name": "hip",
+      "tensor_stem": "hip_4 Best Hip  Knee Pain ",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/4 Best Hip  Knee Pain .mp4"
+    },
+    {
+      "video_name": "Ankle Eversion with Band.mp4",
+      "class_name": "ankle",
+      "tensor_stem": "ankle_Ankle Eversion with Band",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Ankle Eversion with Band.mp4"
+    },
+    {
+      "video_name": "Ankle Inversion with Band.mp4",
+      "class_name": "ankle",
+      "tensor_stem": "ankle_Ankle Inversion with Band",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Ankle Inversion with Band.mp4"
+    },
+    {
+      "video_name": "Ankle Plantarflexion with Band.mp4",
+      "class_name": "ankle",
+      "tensor_stem": "ankle_Ankle Plantarflexion with Band",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Ankle Plantarflexion with Band.mp4"
+    },
+    {
+      "video_name": "Ankle Pumps  .mp4",
+      "class_name": "ankle",
+      "tensor_stem": "ankle_Ankle Pumps  ",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Ankle Pumps  .mp4"
+    },
+    {
+      "video_name": "Ankle Pumps Excercise.mp4",
+      "class_name": "ankle",
+      "tensor_stem": "ankle_Ankle Pumps Excercise",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Ankle Pumps Excercise.mp4"
+    },
+    {
+      "video_name": "Calf Stretch Lower Extremity.mp4",
+      "class_name": "calf",
+      "tensor_stem": "calf_Calf Stretch Lower Extremity",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Calf Stretch Lower Extremity.mp4"
+    },
+    {
+      "video_name": "Downward Calf Stretch.mp4",
+      "class_name": "calf",
+      "tensor_stem": "calf_Downward Calf Stretch",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Downward Calf Stretch.mp4"
+    },
+    {
+      "video_name": "Eccentric-Calf-on-Flat.mp4",
+      "class_name": "calf",
+      "tensor_stem": "calf_Eccentric-Calf-on-Flat",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Eccentric-Calf-on-Flat.mp4"
+    },
+    {
+      "video_name": "HAmstring Stretch BY the the Help of the wall.mp4",
+      "class_name": "hamstring",
+      "tensor_stem": "hamstring_HAmstring Stretch BY the the Help of the wall",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/HAmstring Stretch BY the the Help of the wall.mp4"
+    },
+    {
+      "video_name": "Hamstring Strecthing.mp4",
+      "class_name": "hamstring",
+      "tensor_stem": "hamstring_Hamstring Strecthing",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Hamstring Strecthing.mp4"
+    },
+    {
+      "video_name": "Hamstring Stretch in BED.mp4",
+      "class_name": "hamstring",
+      "tensor_stem": "hamstring_Hamstring Stretch in BED",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Hamstring Stretch in BED.mp4"
+    },
+    {
+      "video_name": "Hamstring Stretch in Long Sitting.mp4",
+      "class_name": "hamstring",
+      "tensor_stem": "hamstring_Hamstring Stretch in Long Sitting",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Hamstring Stretch in Long Sitting.mp4"
+    },
+    {
+      "video_name": "Hamstring Stretch with a Strap.mp4",
+      "class_name": "hamstring",
+      "tensor_stem": "hamstring_Hamstring Stretch with a Strap",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Hamstring Stretch with a Strap.mp4"
+    },
+    {
+      "video_name": "Heel Slide without Shoe.mp4",
+      "class_name": "heel_slide",
+      "tensor_stem": "heel_slide_Heel Slide without Shoe",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Heel Slide without Shoe.mp4"
+    },
+    {
+      "video_name": "Heel Slides on Wall.mp4",
+      "class_name": "heel_slide",
+      "tensor_stem": "heel_slide_Heel Slides on Wall",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Heel Slides on Wall.mp4"
+    },
+    {
+      "video_name": "Heel Slides on bed.mp4",
+      "class_name": "heel_slide",
+      "tensor_stem": "heel_slide_Heel Slides on bed",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Heel Slides on bed.mp4"
+    },
+    {
+      "video_name": "Heel_Slides.mp4",
+      "class_name": "heel_slide",
+      "tensor_stem": "heel_slide_Heel_Slides",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Heel_Slides.mp4"
+    },
+    {
+      "video_name": "Hip Abduction.mp4",
+      "class_name": "hip",
+      "tensor_stem": "hip_Hip Abduction",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Hip Abduction.mp4"
+    },
+    {
+      "video_name": "Hip Bridge.mp4",
+      "class_name": "hip",
+      "tensor_stem": "hip_Hip Bridge",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Hip Bridge.mp4"
+    },
+    {
+      "video_name": "Knee Extension Stretch _ Physical Therapy.mp4",
+      "class_name": "knee",
+      "tensor_stem": "knee_Knee Extension Stretch _ Physical Therapy",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Knee Extension Stretch _ Physical Therapy.mp4"
+    },
+    {
+      "video_name": "Leg Pull Front.mp4",
+      "class_name": "leg_raise",
+      "tensor_stem": "leg_raise_Leg Pull Front",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Leg Pull Front.mp4"
+    },
+    {
+      "video_name": "Lower Hamstring Stretch .mp4",
+      "class_name": "hamstring",
+      "tensor_stem": "hamstring_Lower Hamstring Stretch ",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Lower Hamstring Stretch .mp4"
+    },
+    {
+      "video_name": "Seated Calf Stretch.mp4",
+      "class_name": "calf",
+      "tensor_stem": "calf_Seated Calf Stretch",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Seated Calf Stretch.mp4"
+    },
+    {
+      "video_name": "Seated Hamstring Stretch.mp4",
+      "class_name": "hamstring",
+      "tensor_stem": "hamstring_Seated Hamstring Stretch",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Seated Hamstring Stretch.mp4"
+    },
+    {
+      "video_name": "Small Knee Bends Excercise.mp4",
+      "class_name": "knee",
+      "tensor_stem": "knee_Small Knee Bends Excercise",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Small Knee Bends Excercise.mp4"
+    },
+    {
+      "video_name": "Staright Leg Raises.mp4",
+      "class_name": "leg_raise",
+      "tensor_stem": "leg_raise_Staright Leg Raises",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Staright Leg Raises.mp4"
+    },
+    {
+      "video_name": "Straight Leg Raise under towel support.mp4",
+      "class_name": "leg_raise",
+      "tensor_stem": "leg_raise_Straight Leg Raise under towel support",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Straight Leg Raise under towel support.mp4"
+    },
+    {
+      "video_name": "Toes on the wall calf Stretch.mp4",
+      "class_name": "calf",
+      "tensor_stem": "calf_Toes on the wall calf Stretch",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Toes on the wall calf Stretch.mp4"
+    },
+    {
+      "video_name": "Upper Hamstring Strecthes.mp4",
+      "class_name": "hamstring",
+      "tensor_stem": "hamstring_Upper Hamstring Strecthes",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/Upper Hamstring Strecthes.mp4"
+    },
+    {
+      "video_name": "circular ankle excercises.mp4",
+      "class_name": "ankle",
+      "tensor_stem": "ankle_circular ankle excercises",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/circular ankle excercises.mp4"
+    },
+    {
+      "video_name": "knee cook variation 1.mp4",
+      "class_name": "knee",
+      "tensor_stem": "knee_knee cook variation 1",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/knee cook variation 1.mp4"
+    },
+    {
+      "video_name": "knee cook variation 2.mp4",
+      "class_name": "knee",
+      "tensor_stem": "knee_knee cook variation 2",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/knee cook variation 2.mp4"
+    },
+    {
+      "video_name": "knee cook variation.mp4",
+      "class_name": "knee",
+      "tensor_stem": "knee_knee cook variation",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/knee cook variation.mp4"
+    },
+    {
+      "video_name": "wall calf stretch.mp4",
+      "class_name": "calf",
+      "tensor_stem": "calf_wall calf stretch",
+      "source_path": "/Volumes/Honz's Things/Lower Limb/wall calf stretch.mp4"
+    }
+  ],
+  "duplicates": [],
+  "unclassified": [
+    "A Skips - Running warm up drill_480p.mp4",
+    "Alternating Butt Kicks - Running warm up drill_480p.mp4",
+    "Dumbbell Shin Curl_480p.mp4",
+    "Hip Shifting.mp4",
+    "Leg_lift.mp4",
+    "Peroneal Active Self Massage with a Massage Ball_480p.mp4",
+    "Single Leg Deadlift.mp4",
+    "Single Leg Drop - Unilateral landing mechanics and plyometric_480p.mp4",
+    "Single Leg Pallof Press for single leg Balance and foot strengthening_480p.mp4",
+    "Slant Board Eversion PAIL_480p.mp4",
+    "Slant Board Eversion RAIL (720, youtube).mp4.mp4",
+    "Slant Board Inversion PAIL_480p.mp4",
+    "Slant Board Inversion RAIL_480p.mp4",
+    "Supine Hip Excercise.mp4",
+    "Toe_Crunches.mp4",
+    "Trans-Abdominal-Heel.mp4",
+    "Walking Leg Swings - Running warm up drill_480p.mp4",
+    "videoplayback.mp4"
+  ],
+  "class_breakdown_new": {
+    "calf": 17,
+    "knee": 16,
+    "ankle": 10,
+    "toes": 22,
+    "quadriceps": 5,
+    "heel_slide": 1
+  }
+}

@@ -1,229 +1,242 @@
-# AI Physiotherapy CTR-GCN
+# Rapha — Physiotherapy Rehabilitation AI Platform
 
-Skeleton-based physiotherapy exercise recognition using Channel-wise Topology
-Refinement Graph Convolutional Networks (CTR-GCN) with MediaPipe pose extraction.
+> **Research-grade skeleton action recognition for physiotherapy exercise classification using MediaPipe + CTR-GCN.**
 
-Three body regions and one specialized condition are modelled independently:
-
-| Pipeline    | Body Region      | Dataset Directory        |
-|-------------|------------------|--------------------------|
-| Lower Limb  | Knee / Hip / Ankle / Leg | `processed_dataset/`      |
-| Upper Limb  | Shoulder / Elbow / Wrist | `processed_dataset_upper/` |
-| Face        | Facial landmarks  | `processed_dataset_face/` |
-| Post-Stroke | Post-Stroke Full Body | `processed_dataset_poststroke/` |
+[![Python](https://img.shields.io/badge/Python-3.9%2B-blue)](https://www.python.org)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.2%2B-orange)](https://pytorch.org)
+[![CUDA](https://img.shields.io/badge/CUDA-11.8%2F12.1-green)](https://developer.nvidia.com/cuda-toolkit)
+[![License](https://img.shields.io/badge/License-Research-lightgrey)](#)
 
 ---
 
-## One-Command Automation
+## Overview
 
-> **New users: start here.**  A single command executes the complete
-> extraction → build → split → training pipeline for any body region.
+Rapha is a multi-domain physiotherapy rehabilitation platform that classifies rehabilitation exercises from video using:
 
-### Prerequisites
+- **MediaPipe Pose** — landmark extraction (33 body keypoints)
+- **CTR-GCN** — Channel-wise Topology Refinement Graph Convolutional Network
+- **PyTorch** — training framework with NVIDIA AMP support
 
-```bash
-pip install -r requirements.txt
+### Rehabilitation Domains
+
+| Domain | Classes | Status |
+|---|---|---|
+| **Lower Limb** | ankle, calf, hamstring, heel_slide, hip_abduction, knee_extension, leg_raise, quadriceps_set, toe_raise | ✅ Active |
+| **Upper Limb** | shoulder, elbow, wrist, … | ✅ Active |
+| **Facial** | facial_exercises, … | ✅ Active |
+| **Post-Stroke** | gait, balance, arm_recovery, … | 🚧 Coming |
+
+---
+
+## Repository Structure
+
+```
+rapha-model-test/
+├── configs/                    # Centralized YAML configurations
+│   └── lower_limb.yaml         # All hyperparams, paths, class map
+│
+├── dataset/                    # Domain-organized datasets (not in git)
+│   └── lower_limb/
+│       ├── raw/                # Raw videos by class (not in git)
+│       ├── processed/          # Extracted tensors + split CSVs (not in git)
+│       └── metadata/           # class_map.json, split_manifest.json ✅ in git
+│
+├── dataset_versions/           # Version snapshots (lightweight, ✅ in git)
+│   ├── lower_limb_v1/
+│   └── latest -> lower_limb_v1
+│
+├── experiments/                # Training experiments (configs + metrics ✅ in git)
+│   └── lower_limb/
+│       └── experiment_001/
+│
+├── src/
+│   ├── preprocessing/          # Extraction, tensor building, splitting, validation
+│   ├── loaders/                # PyTorch Dataset classes
+│   └── training/               # CTR-GCN training scripts
+│
+├── automation/
+│   └── run_lower_pipeline.py   # 🚀 One-command pipeline runner
+│
+├── tools/
+│   ├── classify_new_videos.py  # Map new external videos to class folders
+│   ├── migrate_repo.py         # One-time migration from old structure
+│   └── version_dataset.py      # Snapshot dataset as a new version
+│
+├── graph/                      # Skeleton graph topology definitions
+├── model/                      # CTR-GCN model architecture
+└── inference/                  # Inference / prediction scripts
 ```
 
 ---
 
-### Lower Limb Pipeline
+## Quick Start
+
+### 1. Install dependencies
+
+```bash
+pip install -r requirements.txt
+
+# For NVIDIA GPU (CUDA 12.1):
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+
+# For CUDA 11.8:
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+```
+
+### 2. Add your videos
+
+Place raw videos into class subfolders:
+```
+dataset/lower_limb/raw/
+    ankle/
+    calf/
+    hamstring/
+    heel_slide/
+    hip_abduction/
+    knee_extension/
+    leg_raise/
+    quadriceps_set/
+    toe_raise/
+```
+
+Or use the classifier for unorganized video collections:
+```bash
+python tools/classify_new_videos.py --source "/path/to/videos" --dry-run
+# Review tools/proposed_classification.json, then:
+python tools/classify_new_videos.py --confirm
+```
+
+### 3. Run the full pipeline
 
 ```bash
 python automation/run_lower_pipeline.py
 ```
 
-Runs automatically:
+That's it. The pipeline:
+1. Detects only NEW videos (skips already-processed ones)
+2. Runs MediaPipe extraction
+3. Builds CTR-GCN tensors
+4. Generates stratified 70/15/15 train/val/test split
+5. Validates dataset integrity (8 checks)
+6. Generates class distribution plots
+7. Trains CTR-GCN with AMP
+8. Saves checkpoint + experiment artifacts
+9. Versions the dataset snapshot
 
-1. `preprocessing/extract_lower_limb_dataset.py`
-2. `preprocessing/build_ctrgcn_dataset.py`
-3. `preprocessing/split_dataset.py`
-4. `training/train_lower_limb_ctrgcn.py`
+### 4. Add more videos later
 
-Log → `logs/lower_pipeline.log`
+Drop new videos into the class folders and run:
+```bash
+python automation/run_lower_pipeline.py
+```
+Only the new videos are processed. Existing tensors are untouched.
 
 ---
 
-### Upper Limb Pipeline
+## Pipeline Flags
 
 ```bash
-python automation/run_upper_pipeline.py
-```
-
-Runs automatically:
-
-1. `preprocessing/extract_upper_limb_dataset.py`
-2. `preprocessing/build_upper_ctrgcn_dataset.py`
-3. `preprocessing/split_upper_dataset.py`
-4. `training/train_upper_limb_ctrgcn.py`
-
-Log → `logs/upper_pipeline.log`
-
----
-
-### Face Pipeline
-
-```bash
-python automation/run_face_pipeline.py
-```
-
-Runs automatically:
-
-1. `preprocessing/extract_face_dataset.py`
-2. `preprocessing/build_face_ctrgcn_dataset.py`
-3. `preprocessing/split_face_dataset.py`
-4. `training/train_face_ctrgcn.py`
-
-Log → `logs/face_pipeline.log`
-
----
-
-### Post-Stroke Pipeline
-
-```bash
-python automation/run_poststroke_pipeline.py
-```
-
-Runs automatically:
-
-1. `preprocessing/extract_poststroke_dataset.py`
-2. `preprocessing/build_poststroke_ctrgcn_dataset.py`
-3. `preprocessing/split_poststroke_dataset.py`
-4. `training/train_poststroke_ctrgcn.py`
-
-Log → `logs/poststroke_pipeline.log`
-
----
-
-### Master Menu (all pipelines)
-
-```bash
-python automation/run_all_pipelines.py
-```
-
-Presents an interactive menu:
-
-```
-══════════════════════════════════════════════════════════
-  AI PHYSIOTHERAPY — CTR-GCN AUTOMATION SYSTEM
-══════════════════════════════════════════════════════════
-
-  [1]  🦵  Run Lower Limb Pipeline
-  [2]  💪  Run Upper Limb Pipeline
-  [3]  😊  Run Face Pipeline
-  [4]  🧠  Run Post-Stroke Pipeline
-  [5]  🚀  Run ALL Pipelines  (full project)
-  [6]  ⏻   Exit
-```
-
-Non-interactive usage (CI / scripting):
-
-```bash
-python automation/run_all_pipelines.py --run 5   # run all four
-python automation/run_all_pipelines.py --run 1   # lower limb only
-python automation/run_all_pipelines.py --run 2   # upper limb only
-python automation/run_all_pipelines.py --run 3   # face only
-python automation/run_all_pipelines.py --run 4   # post-stroke only
-```
-
----
-
-## Optional Flags
-
-All pipeline scripts accept the following mutually-exclusive flags:
-
-| Flag               | Effect                                                   |
-|--------------------|----------------------------------------------------------|
-| `--skip-extraction`| Skip steps 1-3; jump to training (skeletons must exist). |
-| `--skip-training`  | Run extraction / build / split; skip training.           |
-| `--only-train`     | Same as `--skip-extraction` — alias for clarity.         |
-| `--only-inference` | Placeholder (not yet implemented).                       |
-
-Examples:
-
-```bash
-# Skip re-extraction (skeletons already built)
+# Skip extraction (tensors already built), run validation + training only
 python automation/run_lower_pipeline.py --skip-extraction
 
-# Only retrain the upper limb model
-python automation/run_upper_pipeline.py --only-train
+# Build tensors only, skip training
+python automation/run_lower_pipeline.py --skip-training
 
-# Run all pipelines in training-only mode
-python automation/run_all_pipelines.py --run 5 --only-train
+# Jump directly to training (tensors must exist)
+python automation/run_lower_pipeline.py --only-train
+
+# Force full re-extraction and tensor rebuild from scratch
+python automation/run_lower_pipeline.py --full-rebuild
+
+# Custom experiment name
+python automation/run_lower_pipeline.py --experiment-name ablation_aug
 ```
 
 ---
 
-## Project Structure
+## Dataset Versioning
 
+Every training run creates a versioned snapshot:
+```bash
+dataset_versions/
+├── lower_limb_v1/
+│   ├── manifest.json           # video list, hashes, split, git hash
+│   ├── class_map.json
+│   └── dataset_statistics.json
+└── latest -> lower_limb_v1    # symlink to current version
 ```
-CV_dev/
-│
-├── automation/                  ← automation layer
-│   ├── __init__.py
-│   ├── utils.py                 ← shared helpers
-│   ├── run_lower_pipeline.py    ← lower limb end-to-end
-│   ├── run_upper_pipeline.py    ← upper limb end-to-end
-│   ├── run_face_pipeline.py     ← face end-to-end
-│   ├── run_poststroke_pipeline.py← post-stroke end-to-end
-│   └── run_all_pipelines.py     ← master menu / CLI
-│
-├── preprocessing/               ← extraction & build scripts
-├── training/                    ← training scripts
-├── dataset/                     ← data loaders
-├── model/                       ← CTR-GCN model definition
-├── graph/                       ← graph topology definitions
-├── models/                      ← saved checkpoints (.pth)
-├── results/                     ← training plots & outputs
-│
-├── processed_dataset/           ← lower limb tensors
-├── processed_dataset_upper/     ← upper limb tensors
-├── processed_dataset_face/      ← face tensors
-├── processed_dataset_poststroke/← post-stroke tensors
-│
-├── dataset_raw/                 ← raw lower limb videos
-├── dataset_raw_upper/           ← raw upper limb videos
-├── dataset_raw_poststroke/      ← raw post-stroke videos
-│
-└── logs/                        ← auto-created pipeline logs
-    ├── lower_pipeline.log
-    ├── upper_pipeline.log
-    ├── face_pipeline.log
-    ├── poststroke_pipeline.log
-    └── master_pipeline.log
+
+List all versions:
+```bash
+python tools/version_dataset.py --list
 ```
 
 ---
 
-## Labelling Strategy
+## Experiment Tracking
 
-See [Method.md](Method.md) for the full documentation of the hybrid labelling
-approach (Expert Annotation + Weak Supervision + Auto-Labelling).
-
----
-
-## Error Handling
-
-If a pipeline step fails the automation will:
-
-1. Print `✘ FAILED` with the script path and exit code.
-2. Diagnose the error against known patterns (missing CSV, missing `.npy`,
-   CUDA OOM, tensor shape mismatch, missing checkpoint, import errors, …).
-3. Print a **Suggested Fix** to guide the user.
-4. Write the full traceback to the corresponding log file.
-5. Abort immediately — no further steps are executed.
+Each training run auto-creates a numbered experiment directory:
+```
+experiments/lower_limb/
+└── experiment_001/
+    ├── config.yaml             # exact hyperparameters used
+    ├── metrics.json            # accuracy, git hash, dataset version, timestamp
+    ├── best_model.pth          # best validation checkpoint (not in git)
+    ├── confusion_matrix.png
+    ├── loss_curve.png
+    ├── accuracy_curve.png
+    └── classification_report.txt
+```
 
 ---
 
-## Validation
+## NVIDIA GPU Compatibility
 
-Before each training step the automation checks:
+| GPU | Status |
+|---|---|
+| NVIDIA A100 (80GB SXM) | ✅ Tested |
+| NVIDIA H100 | ✅ Compatible |
+| NVIDIA L40S | ✅ Compatible |
+| NVIDIA L4 | ✅ Compatible |
+| NVIDIA T4 | ✅ Compatible |
 
-| Pipeline   | Required path                              |
-|------------|--------------------------------------------|
-| Lower Limb | `processed_dataset/skeletons/*.npy`        |
-| Upper Limb | `processed_dataset_upper/skeletons/*.npy`  |
-| Face       | `processed_dataset_face/skeletons/*.npy`   |
-| Post-Stroke| `processed_dataset_poststroke/skeletons/*.npy`|
+Features:
+- **AMP mixed precision** — `torch.cuda.amp.autocast()` + `GradScaler`
+- **cudnn.benchmark** — optimal kernel selection for fixed-size inputs
+- **pin_memory** — zero-copy CPU→GPU data transfer
+- **persistent_workers** — avoid DataLoader worker restart overhead
+- **Auto num_workers** — `min(8, cpu_count)` on CUDA, 0 on CPU
 
-If the directory is missing or empty the pipeline aborts with a clear message.
+---
+
+## Reproducibility
+
+See [docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md) for exact commands to reproduce any experiment.
+
+---
+
+## Dataset Download
+
+Raw videos are NOT stored in this repository. See [docs/DATASET_GUIDE.md](docs/DATASET_GUIDE.md) for instructions on:
+- Where to source physiotherapy exercise videos
+- How to organize them into class folders
+- How to validate your local dataset against a published manifest
+
+---
+
+## Citation
+
+If you use this repository in your research, please cite:
+```bibtex
+@software{rapha2026,
+  title  = {Rapha: Physiotherapy Rehabilitation AI Platform},
+  year   = {2026},
+  url    = {https://github.com/your-org/rapha-model}
+}
+```
+
+---
+
+## License
+
+This repository is released for research use. See LICENSE for details.

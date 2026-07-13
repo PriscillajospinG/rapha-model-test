@@ -43,7 +43,7 @@ from model.ctrgcn import Model
 # ── Default paths ──────────────────────────────────────────────────────────────
 _BASE_DIR     = Path(__file__).parent.parent
 DEFAULT_MODEL = _BASE_DIR / "models" / "best_face_ctrgcn.pth"
-CLASS_MAP_CSV = _BASE_DIR / "processed_dataset_face" / "face_class_map.csv"
+CLASS_MAP_CSV = _BASE_DIR / "datasets/face" / "face_class_map.csv"
 
 
 # ─────────────────────────────────────────────────────────────────────────────

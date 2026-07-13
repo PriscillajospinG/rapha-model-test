@@ -3,7 +3,7 @@ preprocessing/organize_poststroke_dataset.py
 ───────────────────────────────────────────────────────────────────────────
 Organizes post-stroke raw videos by copying them from the user's Downloads
 folder into structured class subfolders inside the workspace directory:
-    dataset_raw_poststroke/
+    datasets/post_stroke/raw/
 
 This classification is done dynamically based on filename patterns.
 
@@ -22,7 +22,7 @@ from pathlib import Path
 
 BASE_DIR     = Path(__file__).parent.parent
 RAW_SRC_DIR  = Path("/Users/priscillajosping/Downloads/Post Stroke Excercises")
-OUTPUT_DIR   = BASE_DIR / "dataset_raw_poststroke"
+OUTPUT_DIR   = BASE_DIR / "datasets/post_stroke/raw"
 REPORT_CSV   = OUTPUT_DIR / "classification_report.csv"
 
 # ─── Supported extensions ────────────────────────────────────────────────────

@@ -1,13 +1,13 @@
 """
 preprocessing/split_face_dataset.py
 ───────────────────────────────────────────────────────────────────────────
-Scans processed_dataset_face/skeletons/ for *.npy skeleton files.
+Scans datasets/face/skeletons/ for *.npy skeleton files.
 Derives labels from the face_frame_labels.csv.
 Applies an 80/20 stratified train/test split and generates:
 
-    processed_dataset_face/train_labels.csv
-    processed_dataset_face/test_labels.csv
-    processed_dataset_face/face_class_map.csv
+    datasets/face/train_labels.csv
+    datasets/face/test_labels.csv
+    datasets/face/face_class_map.csv
 
 The class map is built dynamically from whatever classes appear in the
 dataset, so it adapts automatically.
@@ -26,8 +26,8 @@ from sklearn.model_selection import train_test_split
 # ── Paths ─────────────────────────────────────────────────────────────────────
 
 BASE_DIR     = Path(__file__).parent.parent
-SKELETON_DIR = BASE_DIR / "processed_dataset_face" / "skeletons"
-OUTPUT_DIR   = BASE_DIR / "processed_dataset_face"
+SKELETON_DIR = BASE_DIR / "datasets/face" / "skeletons"
+OUTPUT_DIR   = BASE_DIR / "datasets/face"
 INPUT_CSV    = OUTPUT_DIR / "face_frame_labels.csv"
 
 # ── Logger ────────────────────────────────────────────────────────────────────

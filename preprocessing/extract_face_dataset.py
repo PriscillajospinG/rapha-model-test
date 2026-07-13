@@ -3,11 +3,11 @@ preprocessing/extract_face_dataset.py
 ───────────────────────────────────────────────────────────────────────────
 Physiotherapy Facial Rehabilitation Dataset Labeling Pipeline
 
-Recursively scans every video inside dataset_raw_face/, runs MediaPipe
+Recursively scans every video inside datasets/face/raw/, runs MediaPipe
 FaceMesh on every frame, extracts 33 physiotherapy-specific facial
 landmarks (x, y, z), and saves a single frame-level labeled CSV to:
 
-    processed_dataset_face/face_frame_labels.csv
+    datasets/face/face_frame_labels.csv
 
 Landmark selection (33 nodes total):
     Left  Eyebrow  : MP 70, 63, 105, 66, 107  → nodes  0– 4
@@ -40,8 +40,8 @@ import numpy as np
 # ── Paths ─────────────────────────────────────────────────────────────────────
 
 BASE_DIR   = Path(__file__).parent.parent
-RAW_DIR    = BASE_DIR / "dataset_raw_face"
-OUTPUT_DIR = BASE_DIR / "processed_dataset_face"
+RAW_DIR    = BASE_DIR / "datasets/face/raw"
+OUTPUT_DIR = BASE_DIR / "datasets/face"
 OUTPUT_CSV = OUTPUT_DIR / "face_frame_labels.csv"
 
 # ── Landmark configuration ────────────────────────────────────────────────────
@@ -190,7 +190,7 @@ def main() -> None:
     if not RAW_DIR.exists():
         logger.error("Raw dataset directory not found: %s", RAW_DIR.resolve())
         logger.error(
-            "Expected: dataset_raw_face/ (symlink or directory)\n"
+            "Expected: datasets/face/raw/ (symlink or directory)\n"
             "Create with: ln -sf '/path/to/face raw' dataset_raw_face"
         )
         sys.exit(1)

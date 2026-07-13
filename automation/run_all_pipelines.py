@@ -112,8 +112,8 @@ LOG_FILE = PROJECT_ROOT / "logs" / "master_pipeline.log"
 AUTO_PIPELINES: list[dict] = [
     {
         "label":          "Lower Limb",
-        "processed_dir":  PROJECT_ROOT / "processed_dataset",
-        "raw_dir":        PROJECT_ROOT / "dataset_raw",
+        "processed_dir":  PROJECT_ROOT / "datasets/lower_limb",
+        "raw_dir":        PROJECT_ROOT / "datasets/lower_limb/raw",
         "train_script":   PROJECT_ROOT / "training"      / "train_lower_limb_ctrgcn.py",
         "extract_script": PROJECT_ROOT / "preprocessing" / "extract_lower_limb_dataset.py",
         "build_script":   PROJECT_ROOT / "preprocessing" / "build_ctrgcn_dataset.py",
@@ -121,8 +121,8 @@ AUTO_PIPELINES: list[dict] = [
     },
     {
         "label":          "Upper Limb",
-        "processed_dir":  PROJECT_ROOT / "processed_dataset_upper",
-        "raw_dir":        PROJECT_ROOT / "dataset_raw_upper",
+        "processed_dir":  PROJECT_ROOT / "datasets/upper_limb",
+        "raw_dir":        PROJECT_ROOT / "datasets/upper_limb/raw",
         "train_script":   PROJECT_ROOT / "training"      / "train_upper_limb_ctrgcn.py",
         "extract_script": PROJECT_ROOT / "preprocessing" / "extract_upper_limb_dataset.py",
         "build_script":   PROJECT_ROOT / "preprocessing" / "build_ctrgcn_upper_dataset.py",
@@ -130,8 +130,8 @@ AUTO_PIPELINES: list[dict] = [
     },
     {
         "label":          "Face",
-        "processed_dir":  PROJECT_ROOT / "processed_dataset_face",
-        "raw_dir":        PROJECT_ROOT / "dataset_raw_face",
+        "processed_dir":  PROJECT_ROOT / "datasets/face",
+        "raw_dir":        PROJECT_ROOT / "datasets/face/raw",
         "train_script":   PROJECT_ROOT / "training"      / "train_face_ctrgcn.py",
         "extract_script": PROJECT_ROOT / "preprocessing" / "extract_face_dataset.py",
         "build_script":   PROJECT_ROOT / "preprocessing" / "build_ctrgcn_face_dataset.py",
@@ -354,7 +354,7 @@ def _print_auto_summary(
     if all_ok:
         print(f"\n  {GREEN}{BOLD}All pipelines completed successfully ✔{RESET}")
     else:
-        failed = [lbl for lbl, ok, _ in results if not ok]
+        failed = [lbl for lbl, ok, _ in results/lower_limb if not ok]
         print(f"\n  {RED}{BOLD}Failed: {', '.join(failed)}{RESET}")
 
     print(f"{CYAN}{BOLD}{border}{RESET}\n")
@@ -485,7 +485,7 @@ def _print_master_summary(
     if all_ok:
         print(f"\n  {GREEN}{BOLD}All pipelines completed successfully ✔{RESET}")
     else:
-        failed = [lbl for lbl, ok, _ in results if not ok]
+        failed = [lbl for lbl, ok, _ in results/lower_limb if not ok]
         print(f"\n  {RED}{BOLD}Pipelines that failed: {', '.join(failed)}{RESET}")
 
     print(f"{CYAN}{BOLD}{border}{RESET}\n")

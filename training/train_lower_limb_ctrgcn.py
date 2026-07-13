@@ -19,9 +19,9 @@ Training configuration:
 
 Outputs:
   models/best_lower_limb_ctrgcn.pth     best validation accuracy checkpoint
-  results/confusion_matrix.png
-  results/loss_curve.png
-  results/accuracy_curve.png
+  results/lower_limb/confusion_matrix.png
+  results/lower_limb/loss_curve.png
+  results/lower_limb/accuracy_curve.png
 
 Usage:
   python train_lower_limb_ctrgcn.py
@@ -59,11 +59,11 @@ from model.ctrgcn import Model
 
 # ── Paths ──────────────────────────────────────────────────────────────────────
 BASE_DIR     = Path(__file__).parent.parent
-TRAIN_CSV    = BASE_DIR / "processed_dataset" / "train_labels.csv"
-TEST_CSV     = BASE_DIR / "processed_dataset" / "test_labels.csv"
-SKELETON_DIR = BASE_DIR / "processed_dataset" / "skeletons"
+TRAIN_CSV    = BASE_DIR / "datasets/lower_limb" / "train_labels.csv"
+TEST_CSV     = BASE_DIR / "datasets/lower_limb" / "test_labels.csv"
+SKELETON_DIR = BASE_DIR / "datasets/lower_limb" / "skeletons"
 MODELS_DIR   = BASE_DIR / "models"
-RESULTS_DIR  = BASE_DIR / "results"
+RESULTS_DIR  = BASE_DIR / "results/lower_limb"
 BEST_MODEL   = MODELS_DIR / "best_lower_limb_ctrgcn.pth"
 
 # ── Training hyper-parameters ─────────────────────────────────────────────────

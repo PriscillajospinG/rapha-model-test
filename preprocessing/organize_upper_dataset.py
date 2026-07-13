@@ -5,7 +5,7 @@ Step 1 of the upper-limb pipeline.
 
 Recursively scans the raw upper-limb video directory, classifies each video
 by analysing its filename, and COPIES (not moves) it into the appropriate
-exercise class subfolder under dataset_raw_upper/.
+exercise class subfolder under datasets/upper_limb/raw/.
 
 Outputs
 -------
@@ -37,8 +37,8 @@ from pathlib import Path
 # ─── Paths ───────────────────────────────────────────────────────────────────
 
 BASE_DIR     = Path(__file__).parent.parent
-RAW_SRC_DIR  = BASE_DIR / "dataset_raw_upper"   # place raw videos here (cross-platform)\n# NOTE: if your raw source lives elsewhere, override via the --src CLI flag or set\n#       the RAW_SRC_DIR environment variable: RAW_SRC_DIR=os.environ.get("RAW_SRC_DIR", ...)\n
-OUTPUT_DIR   = BASE_DIR / "dataset_raw_upper"
+RAW_SRC_DIR  = BASE_DIR / "datasets/upper_limb/raw"   # place raw videos here (cross-platform)\n# NOTE: if your raw source lives elsewhere, override via the --src CLI flag or set\n#       the RAW_SRC_DIR environment variable: RAW_SRC_DIR=os.environ.get("RAW_SRC_DIR", ...)\n
+OUTPUT_DIR   = BASE_DIR / "datasets/upper_limb/raw"
 REPORT_CSV   = OUTPUT_DIR / "classification_report.csv"
 
 # ─── Supported extensions ────────────────────────────────────────────────────

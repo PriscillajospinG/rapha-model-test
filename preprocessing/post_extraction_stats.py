@@ -1,16 +1,16 @@
 """
 preprocessing/post_extraction_stats.py
 ──────────────────────────────────────
-Reads processed_dataset_upper/upper_limb_frame_labels.csv and generates:
-  processed_dataset_upper/extraction_summary.txt
+Reads datasets/upper_limb/upper_limb_frame_labels.csv and generates:
+  datasets/upper_limb/extraction_summary.txt
 """
 import pandas as pd
 from pathlib import Path
 import sys
 
 BASE_DIR   = Path(__file__).parent.parent
-CSV_PATH   = BASE_DIR / "processed_dataset_upper" / "upper_limb_frame_labels.csv"
-OUT_PATH   = BASE_DIR / "processed_dataset_upper" / "extraction_summary.txt"
+CSV_PATH   = BASE_DIR / "datasets/upper_limb" / "upper_limb_frame_labels.csv"
+OUT_PATH   = BASE_DIR / "datasets/upper_limb" / "extraction_summary.txt"
 
 if not CSV_PATH.exists():
     print(f"[ERROR] CSV not found: {CSV_PATH}")

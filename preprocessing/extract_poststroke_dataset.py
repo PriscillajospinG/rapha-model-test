@@ -3,12 +3,12 @@ preprocessing/extract_poststroke_dataset.py
 ───────────────────────────────────────────────────────────────────────────
 Post-Stroke Rehabilitation CTR-GCN Dataset Labeling Pipeline
 
-Recursively scans every video inside dataset_raw_poststroke/, runs MediaPipe
+Recursively scans every video inside datasets/post_stroke/raw/, runs MediaPipe
 PoseLandmarker (using Tasks API — mediapipe >= 0.10) on every frame,
 extracts post-stroke joint landmarks (joints 11-16, 23-28), and saves
 a single frame-level labeled CSV to:
 
-    processed_dataset_poststroke/poststroke_frame_labels.csv
+    datasets/post_stroke/poststroke_frame_labels.csv
 
 Joint remapping (V=12):
     MP-11 Left Shoulder  → node 0
@@ -45,12 +45,12 @@ from mediapipe.tasks.python.vision import RunningMode
 # ─── Configuration ────────────────────────────────────────────────────────────
 
 BASE_DIR   = Path(__file__).parent.parent
-RAW_DIR    = BASE_DIR / "dataset_raw_poststroke"
-OUTPUT_DIR = BASE_DIR / "processed_dataset_poststroke"
+RAW_DIR    = BASE_DIR / "datasets/post_stroke/raw"
+OUTPUT_DIR = BASE_DIR / "datasets/post_stroke"
 OUTPUT_CSV = OUTPUT_DIR / "poststroke_frame_labels.csv"
 
 # Model path
-MODEL_PATH = BASE_DIR / "pose_landmarker_full.task"
+MODEL_PATH = BASE_DIR / "models/pose_landmarker_full.task"
 
 # MediaPipe Pose landmark indices for post-stroke
 POSTSTROKE_JOINTS_MP     = [11, 12, 13, 14, 15, 16, 23, 24, 25, 26, 27, 28]  # MP indices

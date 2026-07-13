@@ -1,0 +1,128 @@
+# ══════════════════════════════════════════════════════════════════════════════
+#  configs/lower_limb.yaml
+#  ─────────────────────────────────────────────────────────────────────────────
+#  Single source of truth for every Lower Limb pipeline parameter.
+#  Consumed by: preprocessing, training, automation, and versioning scripts.
+#  Edit this file to change any behaviour — never hardcode values in scripts.
+# ══════════════════════════════════════════════════════════════════════════════
+
+# ── Domain identity ────────────────────────────────────────────────────────────
+domain: lower_limb
+display_name: "Lower Limb Rehabilitation"
+version: "1.0"
+
+# ── Dataset paths (relative to project root) ───────────────────────────────────
+paths:
+  raw_dir:           dataset/lower_limb/raw
+  processed_dir:     dataset/lower_limb/processed
+  frame_csv_dir:     dataset/lower_limb/processed/frame_csv
+  tensors_dir:       dataset/lower_limb/processed/tensors
+  train_dir:         dataset/lower_limb/processed/train
+  val_dir:           dataset/lower_limb/processed/val
+  test_dir:          dataset/lower_limb/processed/test
+  metadata_dir:      dataset/lower_limb/metadata
+  checkpoints_dir:   dataset/lower_limb/checkpoints
+  experiments_dir:   experiments/lower_limb
+  versions_dir:      dataset_versions
+  logs_dir:          logs
+
+# Derived file paths (auto-resolved from directories above)
+  frame_csv:         dataset/lower_limb/processed/frame_csv/lower_limb_frame_labels.csv
+  class_map:         dataset/lower_limb/metadata/class_map.json
+  dataset_stats:     dataset/lower_limb/metadata/dataset_statistics.json
+  split_manifest:    dataset/lower_limb/metadata/split_manifest.json
+  extraction_report: dataset/lower_limb/metadata/extraction_report.json
+
+# ── Class map ─────────────────────────────────────────────────────────────────
+#  Canonical exercise names → integer label IDs.
+#  Folder names under raw_dir MUST match these keys exactly.
+classes:
+  ankle:          0
+  calf:           1
+  hamstring:      2
+  heel_slide:     3
+  hip_abduction:  4
+  knee_extension: 5
+  leg_raise:      6
+  quadriceps_set: 7
+  toe_raise:      8
+
+# Legacy name aliases (old folder names → canonical names, for migration only)
+class_aliases:
+  hip:         hip_abduction
+  knee:        knee_extension
+  toes:        toe_raise
+  quadriceps:  quadriceps_set
+
+# ── MediaPipe configuration ────────────────────────────────────────────────────
+mediapipe:
+  static_image_mode:        false   # video mode — uses temporal tracking
+  model_complexity:         1       # 0=Lite  1=Full  2=Heavy
+  smooth_landmarks:         true
+  enable_segmentation:      false
+  min_detection_confidence: 0.5
+  min_tracking_confidence:  0.5
+  joints: [23, 24, 25, 26, 27, 28, 29, 30, 31, 32]   # Lower-limb landmarks
+  missing_sentinel:         -1      # value written when pose not detected
+
+# ── Tensor shape ──────────────────────────────────────────────────────────────
+tensor:
+  C: 4      # channels: x, y, z, visibility
+  T: 300    # temporal frames (resample target)
+  V: 10     # joints (landmarks 23-32)
+  M: 1      # persons per sample
+
+# Supported video extensions (lowercase)
+video_extensions: [".mp4", ".avi", ".mov", ".mkv", ".wmv", ".flv", ".webm"]
+
+# ── Train / Val / Test split ──────────────────────────────────────────────────
+split:
+  train: 0.70
+  val:   0.15
+  test:  0.15
+  seed:  42
+  stratify: true     # stratified by class label
+
+# ── Training hyperparameters ──────────────────────────────────────────────────
+training:
+  epochs:        100
+  batch_size:    8
+  learning_rate: 0.001
+  weight_decay:  0.0001
+  seed:          42
+  label_smoothing: 0.1
+
+  # Optimizer
+  optimizer: adamw          # adamw | sgd | adam
+
+  # Scheduler
+  scheduler: cosine         # cosine | step | none
+  scheduler_T_max: 100
+  scheduler_eta_min: 0.000001
+
+  # GPU
+  use_amp: auto             # auto | true | false  (auto = enable when CUDA available)
+  cudnn_benchmark: true
+  pin_memory: auto          # auto = enable when CUDA available
+  num_workers: auto         # auto = min(8, cpu_count) on CUDA; 0 on CPU
+
+  # Early stopping
+  early_stopping: false
+  patience: 20
+
+  # Augmentation (training split only)
+augmentation:
+  noise_sigma:    0.01      # Gaussian noise on x/y/z channels
+  temporal_flip:  0.5       # probability of reversing time axis
+  lr_mirror:      0.5       # probability of left↔right joint swap
+
+# ── Validation thresholds ─────────────────────────────────────────────────────
+validation:
+  min_samples_per_class:  3     # warn if any class has fewer samples
+  min_detection_rate:     0.5   # warn if MediaPipe fails on >50% of frames
+  max_duplicate_ratio:    0.0   # fail if ANY duplicate hashes found cross-class
+
+# ── Dataset versioning ────────────────────────────────────────────────────────
+versioning:
+  auto_version: true      # create new version snapshot after each training run
+  keep_n_versions: 10     # number of old version manifests to retain

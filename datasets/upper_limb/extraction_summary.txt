@@ -1,0 +1,52 @@
+============================================================
+  Upper-Limb Extraction Summary
+============================================================
+  Total videos processed : 34
+  Total frames extracted : 46,520
+  Failed detections      : 4,375
+  Detection rate         : 90.60%
+
+  Per-class video count:
+    elbow                 : 6 video(s)
+    shoulder              : 12 video(s)
+    shoulder_flexion      : 4 video(s)
+    shoulder_rotation     : 12 video(s)
+
+  Per-video breakdown:
+  Video                                               Label                  Frames   Failed     Det%
+  -----------------------------------------------------------------------------------------------
+  Assisted External Rotation in Neutral.mp4           shoulder_rotation         689        0   100.0%
+  Assisted Flexion in Lying.mp4                       shoulder_flexion        1,059        0   100.0%
+  Assisted Rotation at 45 degree.mp4                  shoulder_rotation         668        0   100.0%
+  Assisted Rotation at 90 degree.mp4                  shoulder_rotation         748        0   100.0%
+  Break Trunk Rotation.mp4                            shoulder_rotation         808        0   100.0%
+  Dips.mp4                                            shoulder                  673        0   100.0%
+  Elbow Plank on Wall with Single Leg Extension.mp4   elbow                     594        0   100.0%
+  Elbow Soft Tissue Release.mp4                       elbow                   3,660    1,990    45.6%
+  Elbow Strenghtning.mp4                              elbow                   2,498    1,001    59.9%
+  Hand Behind Back Strecth.mp4                        shoulder                3,780      170    95.5%
+  Hand Behind Back Strecth_1.mp4                      shoulder                3,780      170    95.5%
+  Lawnmower.mp4                                       shoulder                  628        0   100.0%
+  Plank on Elbows and Half Knee.mp4                   elbow                     750        0   100.0%
+  Push-Up Plus on Table.mp4                           shoulder                  502        0   100.0%
+  Scapula Wall Slides.mp4                             shoulder                1,519        0   100.0%
+  Scapular setting.mp4                                shoulder                  475        0   100.0%
+  Shoulder Drop .mp4                                  shoulder                2,781        1   100.0%
+  Shoulder Flexion with Opposite Arm Isometric Hold.  shoulder_flexion        1,100        0   100.0%
+  Shoulder-Flexion-with-Isometric-Posterio.mp4        shoulder_flexion        1,429      121    91.5%
+  Shoulder-Flexion-with-Isometric-Posterio_1.mp4      shoulder_flexion        1,429      121    91.5%
+  Shoulder-Lateral-Rotation-in-Side-Lying.mp4         shoulder_rotation       1,984      121    93.9%
+  Shoulder-Lateral-Rotation-in-Side-Lying_1.mp4       shoulder_rotation       1,984      121    93.9%
+  Shoulder-Lateral-Rotation.mp4                       shoulder_rotation       2,527      121    95.2%
+  Shoulder-Lateral-Rotation_1.mp4                     shoulder_rotation       2,527      121    95.2%
+  Shoulder-Medial-Rotation-with-Theraband.mp4         shoulder_rotation       1,288      121    90.6%
+  Shoulder-Medial-Rotation-with-Theraband_1.mp4       shoulder_rotation       1,288      121    90.6%
+  Side Lying External Rotation.mp4                    shoulder_rotation         717        0   100.0%
+  Sleeper Stretch.mp4                                 shoulder                  807        2    99.8%
+  Standing scapular retraction - Bent elbows.mp4      elbow                     401        0   100.0%
+  Standing scapular retraction - Straight elbows.mp4  elbow                     422        8    98.1%
+  Supine Serratus Punch.mp4                           shoulder                  788        0   100.0%
+  Thoracic Rotation Mobilization Quadruped.mp4        shoulder_rotation         593        0   100.0%
+  Wall Perturbations with Ball.mp4                    shoulder                  585        0   100.0%
+  wall slides.mp4                                     shoulder                1,039       65    93.7%
+============================================================

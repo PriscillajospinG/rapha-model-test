@@ -53,8 +53,8 @@ MP_MIN_TRACK_CONF     = 0.5
 # ── Default paths ──────────────────────────────────────────────────────────────
 _BASE_DIR     = Path(__file__).parent.parent
 DEFAULT_MODEL = _BASE_DIR / "models" / "best_upper_limb_ctrgcn.pth"
-CLASS_MAP_CSV = _BASE_DIR / "processed_dataset_upper" / "upper_class_map.csv"
-MODEL_TASK    = _BASE_DIR / "pose_landmarker_full.task"
+CLASS_MAP_CSV = _BASE_DIR / "datasets/upper_limb" / "upper_class_map.csv"
+MODEL_TASK    = _BASE_DIR / "models/pose_landmarker_full.task"
 
 
 # ─────────────────────────────────────────────────────────────────────────────

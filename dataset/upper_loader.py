@@ -260,7 +260,7 @@ def build_upper_loaders(
 if __name__ == "__main__":
     import sys
 
-    base         = Path(__file__).parent.parent / "processed_dataset_upper"
+    base         = Path(__file__).parent.parent / "datasets/upper_limb"
     train_csv    = str(base / "train_labels.csv")
     test_csv     = str(base / "test_labels.csv")
     skeleton_dir = str(base / "skeletons")

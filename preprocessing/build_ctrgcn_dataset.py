@@ -1,10 +1,10 @@
 """
 build_ctrgcn_dataset.py
 ─────────────────────────────────────────────────────────────────────────────
-Reads the frame-level landmarks from processed_dataset/lower_limb_frame_labels.csv,
+Reads the frame-level landmarks from datasets/lower_limb/lower_limb_frame_labels.csv,
 groups them by video, handles missing/failed frames, resamples/pads/loops to
 exactly T=300 frames, extracts lower-limb joints (23-32), and constructs/saves
-the CTR-GCN tensors of shape (4, 300, 10, 1) in processed_dataset/skeletons/.
+the CTR-GCN tensors of shape (4, 300, 10, 1) in datasets/lower_limb/skeletons/.
 
 Usage:
     python preprocessing/build_ctrgcn_dataset.py
@@ -20,8 +20,8 @@ from tqdm import tqdm
 
 # Setup paths relative to project root
 BASE_DIR = Path(__file__).parent.parent
-INPUT_CSV = BASE_DIR / "processed_dataset" / "lower_limb_frame_labels.csv"
-OUTPUT_DIR = BASE_DIR / "processed_dataset" / "skeletons"
+INPUT_CSV = BASE_DIR / "datasets/lower_limb" / "lower_limb_frame_labels.csv"
+OUTPUT_DIR = BASE_DIR / "datasets/lower_limb" / "skeletons"
 
 # Logging setup
 logging.basicConfig(

@@ -253,9 +253,9 @@ def build_loaders(
 if __name__ == "__main__":
     import sys
 
-    train_csv    = "processed_dataset/train_labels.csv"
-    test_csv     = "processed_dataset/test_labels.csv"
-    skeleton_dir = "processed_dataset/skeletons"
+    train_csv    = "datasets/lower_limb/train_labels.csv"
+    test_csv     = "datasets/lower_limb/test_labels.csv"
+    skeleton_dir = "datasets/lower_limb/skeletons"
 
     train_ds, test_ds, train_loader, test_loader = build_loaders(
         train_csv, test_csv, skeleton_dir, batch_size=4

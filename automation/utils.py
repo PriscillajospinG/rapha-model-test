@@ -526,7 +526,7 @@ def print_pipeline_summary(
     Args:
         pipeline_name: Display name, e.g. 'Lower Limb'.
         model_path:    Path to the saved best-model checkpoint.
-        results_dir:   Path to the results/output folder.
+        results_dir:   Path to the results/lower_limb/output folder.
         total_elapsed: Total wall-clock seconds for the full pipeline.
         val_accuracy:  Optional validation accuracy string to display.
     """

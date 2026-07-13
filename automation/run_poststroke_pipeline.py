@@ -83,10 +83,10 @@ STEPS: list[dict] = [
     },
 ]
 
-SKELETONS_DIR = PROJECT_ROOT / "processed_dataset_poststroke" / "skeletons"
+SKELETONS_DIR = PROJECT_ROOT / "datasets/post_stroke" / "skeletons"
 LOG_FILE      = PROJECT_ROOT / "logs" / "poststroke_pipeline.log"
 MODEL_PATH    = PROJECT_ROOT / "models" / "best_poststroke_ctrgcn.pth"
-RESULTS_DIR   = PROJECT_ROOT / "results_poststroke"
+RESULTS_DIR   = PROJECT_ROOT / "results/lower_limb/post_stroke"
 
 
 # ──────────────────────────────────────────────────────────────────────────────

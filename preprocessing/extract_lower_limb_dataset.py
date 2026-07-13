@@ -3,11 +3,11 @@ extract_lower_limb_dataset.py
 ─────────────────────────────────────────────────────────────────────────────
 Physiotherapy Lower-Limb CTR-GCN Dataset Labeling Pipeline
 
-Recursively scans every video inside dataset_raw/, runs MediaPipe Pose on
+Recursively scans every video inside datasets/lower_limb/raw/, runs MediaPipe Pose on
 every frame, extracts lower-limb joint landmarks (joints 23-32), and saves
 a single frame-level labeled CSV to:
 
-    processed_dataset/lower_limb_frame_labels.csv
+    datasets/lower_limb/lower_limb_frame_labels.csv
 
 Usage:
     python extract_lower_limb_dataset.py
@@ -29,8 +29,8 @@ import mediapipe as mp
 # ─── Configuration ────────────────────────────────────────────────────────────
 
 BASE_DIR   = Path(__file__).parent.parent
-RAW_DIR    = BASE_DIR / "dataset_raw"
-OUTPUT_DIR = BASE_DIR / "processed_dataset"
+RAW_DIR    = BASE_DIR / "datasets/lower_limb/raw"
+OUTPUT_DIR = BASE_DIR / "datasets/lower_limb"
 OUTPUT_CSV = OUTPUT_DIR / "lower_limb_frame_labels.csv"
 
 # MediaPipe Pose landmark indices for lower limbs only

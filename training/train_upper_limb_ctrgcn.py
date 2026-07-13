@@ -19,9 +19,9 @@ Training configuration:
 
 Outputs:
   models/best_upper_limb_ctrgcn.pth     best validation accuracy checkpoint
-  results_upper/confusion_matrix.png
-  results_upper/loss_curve.png
-  results_upper/accuracy_curve.png
+  results/lower_limb/upper_limb/confusion_matrix.png
+  results/lower_limb/upper_limb/loss_curve.png
+  results/lower_limb/upper_limb/accuracy_curve.png
 
 Usage:
   python training/train_upper_limb_ctrgcn.py
@@ -59,12 +59,12 @@ from model.ctrgcn import Model
 
 # ── Paths ──────────────────────────────────────────────────────────────────────
 BASE_DIR      = Path(__file__).parent.parent
-TRAIN_CSV     = BASE_DIR / "processed_dataset_upper" / "train_labels.csv"
-TEST_CSV      = BASE_DIR / "processed_dataset_upper" / "test_labels.csv"
-SKELETON_DIR  = BASE_DIR / "processed_dataset_upper" / "skeletons"
-CLASS_MAP_CSV = BASE_DIR / "processed_dataset_upper" / "upper_class_map.csv"
+TRAIN_CSV     = BASE_DIR / "datasets/upper_limb" / "train_labels.csv"
+TEST_CSV      = BASE_DIR / "datasets/upper_limb" / "test_labels.csv"
+SKELETON_DIR  = BASE_DIR / "datasets/upper_limb" / "skeletons"
+CLASS_MAP_CSV = BASE_DIR / "datasets/upper_limb" / "upper_class_map.csv"
 MODELS_DIR    = BASE_DIR / "models"
-RESULTS_DIR   = BASE_DIR / "results_upper"
+RESULTS_DIR   = BASE_DIR / "results/lower_limb/upper_limb"
 BEST_MODEL    = MODELS_DIR / "best_upper_limb_ctrgcn.pth"
 
 # ── Training hyper-parameters ─────────────────────────────────────────────────

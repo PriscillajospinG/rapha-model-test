@@ -2,12 +2,12 @@
 preprocessing/build_poststroke_ctrgcn_dataset.py
 ───────────────────────────────────────────────────────────────────────────
 Reads the frame-level landmarks from:
-    processed_dataset_poststroke/poststroke_frame_labels.csv
+    datasets/post_stroke/poststroke_frame_labels.csv
 
 Groups them by video, handles missing frames, resamples/pads/loops to
 exactly T=300 frames, and constructs/saves the CTR-GCN tensors of shape
 (4, 300, 12, 1) in:
-    processed_dataset_poststroke/skeletons/
+    datasets/post_stroke/skeletons/
 
 Tensor layout:
     C=4  : x, y, z, visibility
@@ -29,8 +29,8 @@ from tqdm import tqdm
 
 # Setup paths relative to project root
 BASE_DIR  = Path(__file__).parent.parent
-INPUT_CSV = BASE_DIR / "processed_dataset_poststroke" / "poststroke_frame_labels.csv"
-OUTPUT_DIR = BASE_DIR / "processed_dataset_poststroke" / "skeletons"
+INPUT_CSV = BASE_DIR / "datasets/post_stroke" / "poststroke_frame_labels.csv"
+OUTPUT_DIR = BASE_DIR / "datasets/post_stroke" / "skeletons"
 
 # Logging setup
 logging.basicConfig(
