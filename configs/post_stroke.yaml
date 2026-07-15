@@ -1,0 +1,12 @@
+# Post-Stroke CTR-GCN Training Config
+module: post_stroke
+num_classes: 25
+skeleton_dir: datasets/post_stroke/skeletons
+train_csv: datasets/post_stroke/train_labels.csv
+test_csv: datasets/post_stroke/test_labels.csv
+model_out: models/post_stroke/best_model.pth
+results_dir: evaluation/post_stroke
+epochs: 250
+batch_size: 32
+lr: 0.001
+early_stopping_patience: 30

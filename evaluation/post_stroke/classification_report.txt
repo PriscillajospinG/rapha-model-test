@@ -1,0 +1,10 @@
+                    precision    recall  f1-score   support
+
+shoulder_abduction       0.00      0.00      0.00       1.0
+      sit_to_stand       0.00      0.00      0.00       2.0
+    trunk_rotation       0.00      0.00      0.00       1.0
+      weight_shift       0.00      0.00      0.00       1.0
+
+         micro avg       0.00      0.00      0.00       5.0
+         macro avg       0.00      0.00      0.00       5.0
+      weighted avg       0.00      0.00      0.00       5.0

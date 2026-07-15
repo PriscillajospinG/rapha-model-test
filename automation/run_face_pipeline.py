@@ -86,7 +86,7 @@ STEPS: list[dict] = [
 SKELETONS_DIR = PROJECT_ROOT / "datasets/face" / "skeletons"
 LOG_FILE      = PROJECT_ROOT / "logs" / "face_pipeline.log"
 MODEL_PATH    = PROJECT_ROOT / "models" / "best_face_ctrgcn.pth"
-RESULTS_DIR   = PROJECT_ROOT / "results/lower_limb"
+RESULTS_DIR   = PROJECT_ROOT / "evaluation/lower_limb_final"
 
 
 # ──────────────────────────────────────────────────────────────────────────────

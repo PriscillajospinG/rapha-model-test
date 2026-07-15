@@ -1,0 +1,27 @@
+============================================================
+  Upper-Limb Pre-Flight Validation Report
+============================================================
+
+[1/5] Tensor shape validation
+  ✓  All 34 tensors have shape (4, 300, 8, 1)
+
+[2/5] Graph adjacency validation
+  ✓  A.shape = (3, 8, 8)
+  ✓  A[0] is diagonal (self-links)
+  Graph connections: [(0, 1), (0, 2), (2, 4), (1, 3), (3, 5), (0, 6), (1, 7), (6, 7)]
+
+[3/5] Model forward pass
+  ✓  Input  : (2, 4, 300, 8, 1)
+  ✓  Output : (2, 4)  (num_classes=4)
+  ✓  Parameters : 2,158,093
+
+[4/5] Class coverage in training set
+  Train labels present: [0, 1, 2, 3]
+  ✓  All 4 classes represented in training set
+
+[5/5] Train/test overlap check
+  ✓  No overlap between train (27) and test (7) sets
+
+============================================================
+  Validation Complete
+============================================================

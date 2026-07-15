@@ -92,11 +92,11 @@ from sklearn.metrics import (
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
-from dataset.loader import (
+from preprocessing.lower_limb.loader import (
     CLASS_NAMES, EXPECTED_C, EXPECTED_T, EXPECTED_V, EXPECTED_M,
     PhysioSkeletonDataset, build_loaders,
 )
-from graph.lower_limb import LowerLimbGraph
+from preprocessing.lower_limb.graph import LowerLimbGraph
 from model.ctrgcn import Model
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -808,7 +808,7 @@ def step6_retrain(results_v2_dir: Path) -> float:
 
     # ── Copy result plots to results/lower_limb/v2/ ─────────────────────────────────────
     import shutil
-    results_src = PROJECT_ROOT / "results/lower_limb"
+    results_src = PROJECT_ROOT / "evaluation/lower_limb_final"
     for fname in ["loss_curve.png", "accuracy_curve.png", "confusion_matrix.png"]:
         src = results_src / fname
         if src.exists():

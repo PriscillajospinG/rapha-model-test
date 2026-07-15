@@ -1,0 +1,15 @@
+# Upper Limb CTR-GCN Training Config
+module: upper_limb
+num_classes: 10
+num_joints: 7
+skeleton_dir: datasets/upper_limb/skeletons
+train_csv: datasets/upper_limb/train_labels.csv
+test_csv: datasets/upper_limb/test_labels.csv
+model_out: models/upper_limb/best_model.pth
+results_dir: evaluation/upper_limb
+epochs: 250
+batch_size: 32
+lr: 0.001
+weight_decay: 0.0001
+label_smoothing: 0.1
+early_stopping_patience: 30

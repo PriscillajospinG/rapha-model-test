@@ -1,0 +1,12 @@
+# Face CTR-GCN Training Config
+module: face
+num_classes: 5
+skeleton_dir: datasets/face/skeletons
+train_csv: datasets/face/train_labels.csv
+test_csv: datasets/face/test_labels.csv
+model_out: models/face/best_model.pth
+results_dir: evaluation/face
+epochs: 250
+batch_size: 32
+lr: 0.001
+early_stopping_patience: 30
