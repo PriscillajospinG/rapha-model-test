@@ -480,12 +480,12 @@ def step6_train(cfg: dict) -> dict:
     ).to(device)
 
     # torch.compile (optional, Python 3.12+ partial support)
-    try:
-        model = torch.compile(model)
-        log.info("  torch.compile: ENABLED")
-    except Exception:
-        log.info("  torch.compile: not available, skipping")
-
+    # Disabled for MPS since inductor doesn't support it yet.
+    # try:
+    #     model = torch.compile(model)
+    #     log.info("  torch.compile: ENABLED")
+    # except Exception:
+    #     log.info("  torch.compile: not available, skipping")
     optimiser = torch.optim.AdamW(model.parameters(),
                                   lr=cfg["lr"], weight_decay=cfg["weight_decay"])
     scheduler = CosineAnnealingLR(optimiser, T_max=cfg["epochs"], eta_min=1e-6)

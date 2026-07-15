@@ -1,0 +1,15 @@
+              precision    recall  f1-score   support
+
+  quadriceps       0.00      0.00      0.00         7
+        calf       0.21      0.44      0.29         9
+   leg_raise       0.00      0.00      0.00         7
+        toes       0.00      0.00      0.00         8
+         hip       0.00      0.00      0.00         7
+   hamstring       0.13      0.88      0.23         8
+  heel_slide       0.00      0.00      0.00         8
+        knee       0.00      0.00      0.00         8
+       ankle       0.00      0.00      0.00         9
+
+    accuracy                           0.15        71
+   macro avg       0.04      0.15      0.06        71
+weighted avg       0.04      0.15      0.06        71

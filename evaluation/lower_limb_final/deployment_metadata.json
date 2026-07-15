@@ -1,0 +1,47 @@
+{
+  "class_names": {
+    "8": "ankle",
+    "1": "calf",
+    "5": "hamstring",
+    "6": "heel_slide",
+    "4": "hip",
+    "7": "knee",
+    "2": "leg_raise",
+    "0": "quadriceps",
+    "3": "toes"
+  },
+  "joint_mapping": {
+    "23": "left_hip",
+    "24": "right_hip",
+    "25": "left_knee",
+    "26": "right_knee",
+    "27": "left_ankle",
+    "28": "right_ankle",
+    "29": "left_heel",
+    "30": "right_heel",
+    "31": "left_foot_index",
+    "32": "right_foot_index"
+  },
+  "num_classes": 9,
+  "input_shape": [
+    1,
+    4,
+    300,
+    10,
+    1
+  ],
+  "output_shape": [
+    1,
+    9
+  ],
+  "channels": {
+    "0": "x",
+    "1": "y",
+    "2": "z",
+    "3": "visibility"
+  },
+  "normalization": "none (raw MediaPipe normalized coordinates)",
+  "mediapipe_model": "pose_landmarker_full.task",
+  "framework": "PyTorch + ONNX",
+  "target_hardware": "Apple Silicon MPS / CUDA / CPU"
+}

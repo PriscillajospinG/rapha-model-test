@@ -1,0 +1,20 @@
+{
+  "total_tensors": 345,
+  "train_samples": 265,
+  "test_samples": 71,
+  "classes": {
+    "quadriceps": 32,
+    "calf": 41,
+    "leg_raise": 31,
+    "toes": 40,
+    "hip": 35,
+    "hamstring": 39,
+    "heel_slide": 37,
+    "knee": 39,
+    "ankle": 42
+  },
+  "duplicates_removed": 1,
+  "repaired_tensors": 0,
+  "corrupted_tensors": 0,
+  "unclassified": 8
+}

@@ -1,0 +1,21 @@
+{
+  "accuracy": 0.1549,
+  "macro_f1": 0.0577,
+  "weighted_f1": 0.0625,
+  "precision": 0.0383,
+  "recall": 0.1466,
+  "top3_accuracy": 0.3521,
+  "best_val_acc": 0.1549,
+  "best_epoch": 25,
+  "per_class_f1": {
+    "quadriceps": 0.0,
+    "calf": 0.2857,
+    "leg_raise": 0.0,
+    "toes": 0.0,
+    "hip": 0.0,
+    "hamstring": 0.2333,
+    "heel_slide": 0.0,
+    "knee": 0.0,
+    "ankle": 0.0
+  }
+}
