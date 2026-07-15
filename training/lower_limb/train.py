@@ -64,7 +64,7 @@ TEST_CSV     = BASE_DIR / "datasets/lower_limb" / "test_labels.csv"
 SKELETON_DIR = BASE_DIR / "datasets/lower_limb" / "skeletons"
 MODELS_DIR   = BASE_DIR / "models"
 RESULTS_DIR  = BASE_DIR / "evaluation/lower_limb_final"
-BEST_MODEL   = MODELS_DIR / "best_lower_limb_final.pth"
+BEST_MODEL   = MODELS_DIR / "lower_limb" / "best_model.pth"
 
 # ── Training hyper-parameters ─────────────────────────────────────────────────
 NUM_CLASSES  = 9
